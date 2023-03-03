@@ -6,7 +6,7 @@ const TopNavbar = () => {
       <div className="flex-none">
         <label
           htmlFor="my-drawer"
-          className="btn border-none drawer-button bg-transparent text-white"
+          className="btn border-none drawer-button bg-transparent hover:bg-transparent text-white"
         >
           <svg
             className="swap-off fill-current"
@@ -20,17 +20,13 @@ const TopNavbar = () => {
         </label>
       </div>
       <div className="flex-1">
+        <div className="flex justify-center hover:bg-transparent active:bg-transparent  ml-4  avatar">
+          <div className="w-12 md:w-14  xl:w-20 rounded-full">
+            <img src={basketball} className="flex items-center h-60 w-full" />
+          </div>
+        </div>
 
-      <div className="flex justify-center hover:bg-transparent active:bg-transparent  ml-4  avatar">
-            <div className="w-12 md:w-14  xl:w-20 rounded-full">
-              <img src={basketball} className="flex items-center h-60 w-full" />
-            </div>
-      </div>
-
-      <h1 className="text-sm xl:text-5xl ml-4">
-       Clutch Play
-      </h1>
-
+        <h1 className="text-sm xl:text-5xl ml-4">Clutch Play</h1>
       </div>
 
       <div className="flex-none">

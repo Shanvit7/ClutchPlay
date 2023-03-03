@@ -8,7 +8,7 @@ import "./index.css";
 // Pages routes
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
-import Players from "./pages/Players";
+import CommingSoon from "./pages/CommingSoon";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,31 @@ const router = createBrowserRouter([
   },
   {
     path: "/players",
-    element: <Players />,
+    element: <CommingSoon />,
+  },
+  {
+    path: "/games",
+    element: <CommingSoon />,
+  },
+  {
+    path: "/teams",
+    element: <CommingSoon />,
+  },
+  {
+    path: "/statistics",
+    element: <CommingSoon />,
+  },
+  {
+    path: "/seasons",
+    element: <CommingSoon />,
+  },
+  {
+    path: "/about-us",
+    element: <CommingSoon />,
+  },
+  {
+    path: "/lakers-75",
+    element: <CommingSoon />,
   },
 ]);
 
