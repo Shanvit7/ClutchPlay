@@ -8,6 +8,7 @@ import "./index.css";
 // Pages routes
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import Players from "./pages/Players";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/players",
+    element: <Players />,
   },
 ]);
 

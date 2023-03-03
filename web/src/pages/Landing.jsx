@@ -14,7 +14,7 @@ const Landing = () => {
         <div>
           <img
             src={logo}
-            className="w-52 h-52 xl:w-72 xl:h-72 md:w-60 md:h-60"
+            className="w-60 h-60 xl:w-80 xl:h-80 md:w-72 md:h-72"
           />
         </div>
       </motion.div>

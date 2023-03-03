@@ -71,3 +71,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+::-webkit-scrollbar {
+ background: yellow;
+ width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#ccccff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:#535bf2;
+}
+
+
+@media screen and (max-width:500px) {
+  ::-webkit-scrollbar {
+   width: 0.2rem;
+   }
+}
