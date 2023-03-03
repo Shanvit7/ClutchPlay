@@ -8,10 +8,15 @@ module.exports = {
     extend: {},
   },
   daisyui: {
-    themes: true,
     base: true,
     utils: true,
-    themes: ["cyberpunk"],
+    themes: [{
+      cyberpunk:{
+        ...require("daisyui/src/colors/themes")["[data-theme=cyberpunk]"],
+         primary:'black',
+         accentL:'red',
+      }
+    }],
   },
   plugins: [require("@tailwindcss/typography"),require("daisyui")],
 }
