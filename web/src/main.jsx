@@ -9,6 +9,7 @@ import "./index.css";
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import CommingSoon from "./pages/CommingSoon";
+import Players from "./pages/Players";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/players",
-    element: <CommingSoon />,
+    element: <Players />,
   },
   {
     path: "/games",
@@ -45,6 +46,14 @@ const router = createBrowserRouter([
   },
   {
     path: "/lakers-75",
+    element: <CommingSoon />,
+  },
+  {
+    path: "/players-in-news",
+    element: <CommingSoon />,
+  },
+  {
+    path: "/player-search",
     element: <CommingSoon />,
   },
 ]);

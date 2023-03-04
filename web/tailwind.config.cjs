@@ -14,7 +14,10 @@ module.exports = {
       cyberpunk:{
         ...require("daisyui/src/colors/themes")["[data-theme=cyberpunk]"],
          primary:'black',
-         accentL:'red',
+         '.custom-card':{
+          'background-color':'transparent',
+          'color':'white',
+         },
       }
     }],
   },
