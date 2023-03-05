@@ -10,6 +10,7 @@ import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import CommingSoon from "./pages/CommingSoon";
 import Players from "./pages/Players";
+import PlayerInHeadline from "./pages/PlayerInHeadline";
 
 const router = createBrowserRouter([
   {
@@ -49,8 +50,8 @@ const router = createBrowserRouter([
     element: <CommingSoon />,
   },
   {
-    path: "/players-in-news",
-    element: <CommingSoon />,
+    path: "/player-in-headline",
+    element: <PlayerInHeadline />,
   },
   {
     path: "/player-search",

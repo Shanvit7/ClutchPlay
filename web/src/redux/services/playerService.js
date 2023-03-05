@@ -7,10 +7,21 @@ export const playerApi = createApi({
     baseUrl: import.meta.env.VITE_NBA_BASE_API_URL,
   }),
   endpoints: (builder) => ({
+
     getAllPlayers: builder.query({
-      query: () => ({ url: `/players`, method: "get" }),
+      query: () => ({ url: `/Players?key=${import.meta.env.VITE_NBA_BASE_API_KEY}`,
+       method: "get" 
+      }),
     }),
+
+    getPlayerInHeadline: builder.query({
+      query: (date) => ({
+        url: `/NewsByDate/${date}?key=${import.meta.env.VITE_NBA_BASE_API_KEY}`,
+        method: "get",
+     }),
+    }),
+
   }),
 });
 
-export const { useGetAllPlayersQuery } = playerApi;
+export const { useGetAllPlayersQuery, useGetPlayerInHeadlineQuery } = playerApi;
