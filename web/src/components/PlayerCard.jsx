@@ -20,7 +20,7 @@ const PlayerCard = ({ playerInfo = {} }) => {
           <p>Team: {playerInfo.Team}</p>
         </div>
         <button className="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-md text-center">
-          Know More
+          Comming Soon
         </button>
       </div>
     </div>
