@@ -2,50 +2,33 @@ import React from "react";
 import SideBarWrapper from "../components/SideBarWrapper";
 import TopNavbar from "../components/TopNavbar";
 import Footer from "../components/Footer";
+import PlayerCard from "../components/PlayerCard";
+import { useGetAllPlayersQuery } from "../redux/services/playerService";
 
 const SearchPlayers = () => {
+  const { data: players = [] } = useGetAllPlayersQuery();
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar />
-        <div className="w-full">
-          <div className="flex justify-center mt-8">
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">Search for players</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Type here"
-                className="input input-bordered w-full max-w-xs bg-black "
-              />
-            </div>
-          </div>
 
-          <div className="flex justify-center mt-14">
-            <div
-              className="card lg:card-side w-1/4
-           shadow-xl"
-            >
-              <figure>
-                <img src="/photo5.jpg" alt="Album" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title text-black">
-                  New album is released!
-                </h2>
-                <p className="text-black">
-                  Click the button to listen on Spotiwhy app.
-                </p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary bg-white text-black">
-                    Listen
-                  </button>
-                </div>
-              </div>
-            </div>
+        <div className="flex w-full justify-center">
+          <input
+            type="text"
+            placeholder="Comming Soon"
+            className="input input-bordered bg-black w-full text-violet-50 max-w-xs mt-14"
+            disabled
+          />
+        </div>
+
+        <div className="flex justify-center mt-14">
+          <div className="inline-grid gap-14 grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3">
+            {players.map((player, key) => {
+              return <PlayerCard playerInfo={player} key={key} />;
+            })}
           </div>
         </div>
+
         <Footer />
       </SideBarWrapper>
     </div>
