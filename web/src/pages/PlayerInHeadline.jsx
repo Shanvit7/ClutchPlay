@@ -6,6 +6,7 @@ import NewsCard from "../components/NewsCard";
 import Loader from "../components/Loader";
 import { useGetPlayerInHeadlineQuery } from "../redux/services/playerService";
 import SomethingWentWrong from "../components/SomethingWentWrong";
+import BackButton from "../components/BackButton";
 const PlayerInHeadline = () => {
   // using plain JS to get todays date in API reqiured format;
   const months = [
@@ -36,7 +37,8 @@ const PlayerInHeadline = () => {
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar />
+        <TopNavbar pageTitle={"Player In Today's News"} />
+        <BackButton />
         {isLoading ? (
           <Loader />
         ) : isSuccess ? (

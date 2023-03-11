@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 import CommingSoon from "./pages/CommingSoon";
 import Players from "./pages/Players";
 import PlayerInHeadline from "./pages/PlayerInHeadline";
-import SearchPlayers from "./pages/SearchPlayers";
+import MeetThePlayers from "./pages/MeetThePlayers";
 
 const router = createBrowserRouter([
   {
@@ -55,8 +55,8 @@ const router = createBrowserRouter([
     element: <PlayerInHeadline />,
   },
   {
-    path: "/player-search",
-    element: <SearchPlayers />,
+    path: "/meet-the-players",
+    element: <MeetThePlayers />,
   },
 ]);
 

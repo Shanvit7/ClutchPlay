@@ -1,6 +1,6 @@
 import React from "react";
 import basketball from "/basketball2.svg";
-const TopNavbar = () => {
+const TopNavbar = ({ pageTitle }) => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-none">
@@ -26,7 +26,9 @@ const TopNavbar = () => {
           </div>
         </div>
 
-        <h1 className="text-sm xl:text-5xl ml-4">Clutch Play</h1>
+        <h1 className="text-sm xl:text-5xl ml-4">
+          {pageTitle || "Clutch Play"}
+        </h1>
       </div>
 
       <div className="flex-none">

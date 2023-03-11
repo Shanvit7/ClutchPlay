@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar />
+        <TopNavbar pageTitle={"Home"} />
 
         <motion.h2
           initial={{ opacity: 0 }}
