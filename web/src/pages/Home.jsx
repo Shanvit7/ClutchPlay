@@ -3,9 +3,9 @@ import SideBarWrapper from "../components/SideBarWrapper";
 import TopNavbar from "../components/TopNavbar";
 import Footer from "../components/Footer";
 import nbaLogo from "/nba.svg";
-import lakersLogo from "/lakers.svg";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { LAL } from "react-nba-logos";
 const Home = () => {
   const navigate = useNavigate();
   return (
@@ -38,7 +38,7 @@ const Home = () => {
           transition={{ delay: 0.6, ease: "backInOut" }}
         >
           <img src={nbaLogo} className="w-24 h-24" />
-          <img src={lakersLogo} className="w-24 h-24" />
+          <LAL />
         </motion.div>
 
         <motion.div
