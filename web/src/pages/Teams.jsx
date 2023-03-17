@@ -4,22 +4,22 @@ import TopNavbar from "../components/TopNavbar";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-const Teams = ()=>{
-    const navigate = useNavigate();
-    return(
-        <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+const Teams = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar pageTitle={'Teams'}/>
+        <TopNavbar pageTitle={"Teams"} />
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1, ease: "easeInOut" }}
           className="text-black mt-20 ml-8"
         >
-            Conference
-         </motion.h1>
+          Conference
+        </motion.h1>
 
-         <div className="flex flex-col h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
+        <div className="flex flex-col h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -66,7 +66,7 @@ const Teams = ()=>{
         <Footer />
       </SideBarWrapper>
     </div>
-    )
-}
+  );
+};
 
 export default Teams;

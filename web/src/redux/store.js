@@ -9,6 +9,6 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ thunk: true }).concat(
       playerApi.middleware,
-      teamApi.middleware,
+      teamApi.middleware
     ),
 });

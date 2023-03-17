@@ -8,10 +8,11 @@ export const teamApi = createApi({
   }),
   endpoints: (builder) => ({
     getAllTeams: builder.query({
-        query: () => ({ url: `/teams?key=${import.meta.env.VITE_NBA_BASE_API_KEY}`,
-         method: "get" 
-        }),
+      query: () => ({
+        url: `/teams?key=${import.meta.env.VITE_NBA_BASE_API_KEY}`,
+        method: "get",
       }),
+    }),
   }),
 });
 
