@@ -4,23 +4,22 @@ import TopNavbar from "../components/TopNavbar";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-
-const Players = () => {
-  const navigate = useNavigate();
-  return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+const Teams = ()=>{
+    const navigate = useNavigate();
+    return(
+        <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar pageTitle={"Players"} />
+        <TopNavbar pageTitle={'Teams'}/>
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1, ease: "easeInOut" }}
           className="text-black mt-20 ml-8"
         >
-          Know all about NBA Players
-        </motion.h1>
+            Conference
+         </motion.h1>
 
-        <div className="flex flex-col h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
+         <div className="flex flex-col h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -28,15 +27,15 @@ const Players = () => {
             className="card w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
-              <img src="/players.jpg" alt="meet-the-players" />
+              <img src="/eastern.jpg" alt="western" />
             </figure>
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
                 <button
                   className="btn btn-primary"
-                  onClick={() => navigate("/meet-the-players")}
+                  onClick={() => navigate("/teams/eastern")}
                 >
-                  Meet the Players
+                  Eastern Conference
                 </button>
               </div>
             </div>
@@ -49,24 +48,25 @@ const Players = () => {
             className="card w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
-              <img src="/players2.jpg" alt="player-in-todays-headline" />
+              <img src="/western.jpg" alt="eastern" />
             </figure>
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
                 <button
                   className="btn btn-primary"
-                  onClick={() => navigate("/player-in-headline")}
+                  onClick={() => navigate("/teams/western")}
                 >
-                  Player In Today's Headline
+                  Western Conference
                 </button>
               </div>
             </div>
           </motion.div>
         </div>
+
         <Footer />
       </SideBarWrapper>
     </div>
-  );
-};
+    )
+}
 
-export default Players;
+export default Teams;

@@ -12,7 +12,8 @@ import CommingSoon from "./pages/CommingSoon";
 import Players from "./pages/Players";
 import PlayerInHeadline from "./pages/PlayerInHeadline";
 import MeetThePlayers from "./pages/MeetThePlayers";
-
+import Teams from "./pages/Teams";
+import Conference from "./pages/Conference";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/teams",
-    element: <CommingSoon />,
+    element: <Teams />,
+  },
+  {
+    path: "/teams/:conferenceId",
+    element: <Conference />,
   },
   {
     path: "/statistics",
