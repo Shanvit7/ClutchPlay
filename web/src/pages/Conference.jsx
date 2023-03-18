@@ -16,7 +16,7 @@ const Conference = () => {
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar pageTitle={"Teams"} />
+        <TopNavbar pageTitle={`Teams of ${conferenceId} Conference`} />
         <BackButton />
         {isLoading ? (
           <Loader />

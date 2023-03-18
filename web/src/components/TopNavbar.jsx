@@ -26,7 +26,7 @@ const TopNavbar = ({ pageTitle }) => {
           </div>
         </div>
 
-        <h1 className="text-sm xl:text-5xl ml-4">
+        <h1 className="text-sm xl:text-5xl ml-4 capitalize">
           {pageTitle || "Clutch Play"}
         </h1>
       </div>
