@@ -40,7 +40,7 @@ const DivisionRows = ({ team = {} }) => {
         }}
       >
         <button className="btn btn-ghost hover:bg-transparent btn-xs">
-          Know More
+          Comming Soon
         </button>
       </th>
     </tr>

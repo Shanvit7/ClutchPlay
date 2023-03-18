@@ -1,10 +1,8 @@
 import React from "react";
-import { useGetAllTeamsQuery } from "../../redux/services/teamService";
 import DivisionRows from "./DivisonRows";
 
-const DivisionTable = ({ divisionName }) => {
-  const { data: teamsData = [] } = useGetAllTeamsQuery();
-  const divisionTeams = teamsData.filter((team) => {
+const DivisionTable = ({ divisionName, teamData }) => {
+  const divisionTeams = teamData.filter((team) => {
     return team.Division === divisionName;
   });
   return (
