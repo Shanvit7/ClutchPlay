@@ -42,7 +42,16 @@ const PlayerInHeadline = () => {
         {isLoading ? (
           <Loader />
         ) : isSuccess ? (
-          news.map((item, key) => <NewsCard newsItem={item} key={key} />)
+          news.length === 0 ? (
+            <div className="flex flex-col justify-center items-center text-black w-full h-1/2 text-3xl lg:text-5xl xl:text-5xl">
+              <div>Nothing exciting happened recently 🙁.</div>
+              <div className="mt-8">
+                We will be back soon with a headline ⛹️‍♂️.
+              </div>
+            </div>
+          ) : (
+            news.map((item, key) => <NewsCard newsItem={item} key={key} />)
+          )
         ) : (
           <SomethingWentWrong />
         )}
