@@ -1,12 +1,12 @@
 import React from "react";
-import SideBarWrapper from "../components/SideBarWrapper";
-import TopNavbar from "../components/TopNavbar";
-import Footer from "../components/Footer";
-import NewsCard from "../components/NewsCard";
-import Loader from "../components/Loader";
+import SideBarWrapper from "../components/Common/SideBarWrapper";
+import TopNavbar from "../components/Common/TopNavbar";
+import Footer from "../components/Common/Footer";
+import NewsCard from "../components/Players/NewsCard";
+import Loader from "../components/Common/Loader";
 import { useGetPlayerInHeadlineQuery } from "../redux/services/playerService";
-import SomethingWentWrong from "../components/SomethingWentWrong";
-import BackButton from "../components/BackButton";
+import SomethingWentWrong from "../components/Error/SomethingWentWrong";
+import BackButton from "../components/Common/BackButton";
 const PlayerInHeadline = () => {
   // using plain JS to get todays date in API reqiured format;
   const months = [

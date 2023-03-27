@@ -1,7 +1,7 @@
 import React from "react";
-import SideBarWrapper from "../components/SideBarWrapper";
-import TopNavbar from "../components/TopNavbar";
-import Footer from "../components/Footer";
+import SideBarWrapper from "../components/Common/SideBarWrapper";
+import TopNavbar from "../components/Common/TopNavbar";
+import Footer from "../components/Common/Footer";
 const CommingSoon = () => {
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">

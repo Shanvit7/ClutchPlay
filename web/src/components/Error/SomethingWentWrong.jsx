@@ -1,5 +1,5 @@
 import React from "react";
-import { teamLogos } from "../utils/teamInfo";
+import { teamLogos } from "../../utils/teamInfo";
 
 const SomethingWentWrong = () => {
   const randomIndex = Math.floor(Math.random() * teamLogos.length);

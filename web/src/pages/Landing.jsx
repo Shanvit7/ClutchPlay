@@ -1,5 +1,5 @@
 import React from "react";
-import LandingCarousel from "../components/LandingCarousel";
+import LandingCarousel from "../components/Landing/LandingCarousel";
 import { motion } from "framer-motion";
 import logo from "/logo.png";
 import basketball from "/basketball.svg";

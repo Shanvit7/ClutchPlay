@@ -1,12 +1,12 @@
 import React from "react";
-import SideBarWrapper from "../components/SideBarWrapper";
-import TopNavbar from "../components/TopNavbar";
-import Footer from "../components/Footer";
-import PlayerCard from "../components/PlayerCard";
+import SideBarWrapper from "../components/Common/SideBarWrapper";
+import TopNavbar from "../components/Common/TopNavbar";
+import Footer from "../components/Common/Footer";
+import PlayerCard from "../components/Players/PlayerCard";
 import { useGetAllPlayersQuery } from "../redux/services/playerService";
-import Loader from "../components/Loader";
-import SomethingWentWrong from "../components/SomethingWentWrong";
-import BackButton from "../components/BackButton";
+import Loader from "../components/Common/Loader";
+import SomethingWentWrong from "../components/Error/SomethingWentWrong";
+import BackButton from "../components/Common/BackButton";
 
 const MeetThePlayers = () => {
   const { data: players = [], isLoading, isSuccess } = useGetAllPlayersQuery();
