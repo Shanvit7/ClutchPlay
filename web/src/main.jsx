@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import { QueryClientProvider,QueryClient } from 'react-query'
 import "./index.css";
 
 // Pages routes
@@ -14,6 +13,8 @@ import PlayerInHeadline from "./pages/PlayerInHeadline";
 import MeetThePlayers from "./pages/MeetThePlayers";
 import Teams from "./pages/Teams";
 import Conference from "./pages/Conference";
+
+const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
@@ -66,9 +67,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
+  <QueryClientProvider client={queryClient}>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
-  </Provider>
+    </QueryClientProvider>
 );

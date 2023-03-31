@@ -4,9 +4,10 @@ import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import NewsCard from "../components/Players/NewsCard";
 import Loader from "../components/Common/Loader";
-import { useGetPlayerInHeadlineQuery } from "../redux/services/playerService";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import BackButton from "../components/Common/BackButton";
+import { getPlayerInHeadline } from "../services/playerService";
+import { useQuery } from "react-query";
 const PlayerInHeadline = () => {
   // using plain JS to get todays date in API reqiured format;
   const months = [
@@ -33,7 +34,7 @@ const PlayerInHeadline = () => {
     data: news = [],
     isLoading,
     isSuccess,
-  } = useGetPlayerInHeadlineQuery(formattedDate);
+  } = useQuery('playersInNews',()=>getPlayerInHeadline(formattedDate));
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>

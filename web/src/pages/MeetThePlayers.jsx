@@ -3,13 +3,13 @@ import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import PlayerCard from "../components/Players/PlayerCard";
-import { useGetAllPlayersQuery } from "../redux/services/playerService";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import BackButton from "../components/Common/BackButton";
-
+import { useQuery } from "react-query";
+import { getAllPlayers } from "../services/playerService";
 const MeetThePlayers = () => {
-  const { data: players = [], isLoading, isSuccess } = useGetAllPlayersQuery();
+  const { data: players =[],isLoading,isSuccess} = useQuery('players',getAllPlayers);
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>

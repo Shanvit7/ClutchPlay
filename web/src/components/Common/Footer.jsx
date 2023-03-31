@@ -2,7 +2,6 @@ import React from "react";
 import reactJS from "/reactjs.svg";
 import viteJS from "/vitejs.svg";
 import tailwindCSS from "/tailwindcss.svg";
-import reduxToolKit from "/redux.svg";
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-primary text-primary-content relative bottom-0 mt-40">
@@ -30,7 +29,6 @@ const Footer = () => {
           <img src={reactJS} className="w-10 h-10" />
           <img src={viteJS} className="w-10 h-10" />
           <img src={tailwindCSS} className="w-10 h-10" />
-          <img src={reduxToolKit} className="w-10 h-10" />
         </div>
       </div>
     </footer>

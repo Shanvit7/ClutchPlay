@@ -6,13 +6,14 @@ import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import BackButton from "../components/Common/BackButton";
 import DivisionsByConference from "../components/Divisions/DivisionsByConference";
-import { useGetAllTeamsQuery } from "../redux/services/teamService";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
+import { useQuery } from "react-query";
+import { getAllTeams } from "../services/teamService";
 
 const Conference = () => {
   const { conferenceId } = useParams();
-  const { data: teamData = [], isLoading, isSuccess } = useGetAllTeamsQuery();
+  const { data: teamData = [], isLoading, isSuccess } = useQuery('teams',getAllTeams);
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
