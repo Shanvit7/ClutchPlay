@@ -45,7 +45,7 @@ const router = createBrowserRouter([
     element: <CommingSoon />,
   },
   {
-    path: "/seasons",
+    path: "/stadiums",
     element: <CommingSoon />,
   },
   {
