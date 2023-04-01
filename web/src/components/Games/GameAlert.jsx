@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 import nbaLogo from "/nba.svg";
-import { areGamesinProgress } from "../../../services/gameService";
+import { areGamesinProgress } from "../../services/gameService";
 import { useQuery } from "react-query";
 const GameAlert = () => {
   const {data: areGamesinProgressStatus} = useQuery('areGamesInProgresss',areGamesinProgress);
   return (
     <Fragment>
-      { areGamesinProgressStatus &&
+      {areGamesinProgressStatus &&
         <div className="alert shadow-lg bg-slate-100 text-black">
         <div>
             <img src={nbaLogo} className="w-10 h-10"/>
@@ -23,7 +23,7 @@ const GameAlert = () => {
       </div>
       <div className="flex-none">
         <button className="btn btn-sm bg-black text-slate-100">
-            See the scores
+            Comming Soon
         </button>
       </div>
     </div>

@@ -1,16 +1,35 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { nbaTeams } from "../../utils/teamInfo";
 import nbaLogo from "/nba.svg";
 import { determineWinner } from "../../utils/gameInfo";
+import Loader from "../Common/Loader";
+import SomethingWentWrong from "../Error/SomethingWentWrong";
 const NBALogo = () => {
   return <img src={nbaLogo} className="w-20 h-20" />;
 };
-const GameCard = ({ gameInfo = {} }) => {
+const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
   const HomeLogo = nbaTeams.get(gameInfo.home_team?.abbreviation) || NBALogo;
   const AwayLogo = nbaTeams.get(gameInfo.visitor_team?.abbreviation) || NBALogo;
   return (
-    <div className="stats bg-white text-black w-full shadow mt-4">
-      <div className="stat">
+     <div className="stats bg-white text-black w-full shadow mt-4">
+      {
+        status === 'loading'
+        ?
+           <Loader />
+        :
+        status === 'error'
+        ?
+        <SomethingWentWrong />
+        :
+        areNogamesScheduled
+        ?
+        <div className="p-20 flex flex-col items-center justify-center">
+          <NBALogo/> 
+          <h2 className="mt-4 font-bold">No Games Scheduled 📅</h2>
+        </div>
+        :
+        <Fragment>
+        <div className="stat pl-0 pr-0 xl:pl-6 xl:pr-6">
         <div className="text-center text-xxs">
           {gameInfo.home_team?.division || "Division"}
         </div>
@@ -26,22 +45,22 @@ const GameCard = ({ gameInfo = {} }) => {
         </div>
       </div>
 
-      <div className="stat">
-        <div className="stat-title text-center font-bold text-4xl">
+      <div className="stat pl-0 pr-0 xl:pl-6 xl:pr-6 lg:pl-4 lg:pr-4">
+        <div className="stat-title text-center font-bold text-md xl:text-4xl lg:text-2xl">
           {gameInfo.status || "TBD"}
         </div>
-        <div className="stat-value text-center font-bold text-md">
-          {gameInfo.home_team?.abbreviation || "Team Home"} vs{" "}
+        <div className="stat-value text-center font-bold text-sm xl:text-4xl lg:text-2xl">
+          {gameInfo.home_team?.abbreviation || "Team Home"} vs{" "} 
           {gameInfo.visitor_team?.abbreviation || "Team Away"}
         </div>
         <div className="stat-desc text-center font-bold text-black">
           {gameInfo.status === "Final" && determineWinner(gameInfo)}
         </div>
         <button className="place-self-center btn btn-sm bg-black text-slate-100 xl:w-2/4">
-          See Game Stats
+          Comming Soon
         </button>
       </div>
-      <div className="stat">
+      <div className="stat pl-0 pr-0 xl:pl-6 xl:pr-6">
         <div className="text-center text-xxs">
           {gameInfo.visitor_team?.division || "Division"}
         </div>
@@ -56,7 +75,9 @@ const GameCard = ({ gameInfo = {} }) => {
           {gameInfo.visitor_team_score || "TBD"}
         </div>
       </div>
-    </div>
+      </Fragment>
+      }
+      </div>
   );
 };
 

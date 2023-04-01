@@ -24,15 +24,19 @@ const NewsCard = ({ newsItem }) => {
               </small>
             </p>
             <div className="flex flex-col h-36 justify-around xl:flex-row xl:h-20 lg:flex-row">
-              <button
-                className="btn btn-primary"
-                onClick={visitOriginalSourceUrl}
-              >
-                Visit {newsItem.OriginalSource}
-              </button>
-              <button className="btn btn-primary" onClick={visitSource}>
-                Visit {newsItem.Source}
-              </button>
+              {newsItem.OriginalSource && (
+                <button
+                  className="btn btn-primary"
+                  onClick={visitOriginalSourceUrl}
+                >
+                  Visit {newsItem.OriginalSource}
+                </button>
+              )}
+              {newsItem.Source && (
+                <button className="btn btn-primary" onClick={visitSource}>
+                  Visit {newsItem.Source}
+                </button>
+              )}
             </div>
           </div>
         </div>
