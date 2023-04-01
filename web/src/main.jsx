@@ -13,7 +13,7 @@ import PlayerInHeadline from "./pages/PlayerInHeadline";
 import MeetThePlayers from "./pages/MeetThePlayers";
 import Teams from "./pages/Teams";
 import Conference from "./pages/Conference";
-
+import Games from './pages/Games';
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/games",
-    element: <CommingSoon />,
+    element: <Games />,
   },
   {
     path: "/teams",

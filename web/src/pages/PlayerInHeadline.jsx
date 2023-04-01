@@ -8,33 +8,13 @@ import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import BackButton from "../components/Common/BackButton";
 import { getPlayerInHeadline } from "../services/playerService";
 import { useQuery } from "react-query";
+import { formattedDate } from "../utils/date";
 const PlayerInHeadline = () => {
-  // using plain JS to get todays date in API reqiured format;
-  const months = [
-    "JAN",
-    "FEB",
-    "MAR",
-    "APR",
-    "MAY",
-    "JUN",
-    "JUL",
-    "AUG",
-    "SEP",
-    "OCT",
-    "NOV",
-    "DEC",
-  ];
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = months[today.getMonth()];
-  const day = ("0" + today.getDate()).slice(-2);
-  const formattedDate = `${year}-${month}-${day}`;
-
   const {
     data: news = [],
     isLoading,
     isSuccess,
-  } = useQuery('playersInNews',()=>getPlayerInHeadline(formattedDate));
+  } = useQuery('playersInNews',()=>getPlayerInHeadline(formattedDate()));
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>

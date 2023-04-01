@@ -9,7 +9,6 @@ const Landing = () => {
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-hidden">
       <LandingCarousel />
-
       <motion.div className="flex w-full justify-center z-10 absolute top-20 font-thin">
         <div>
           <img

@@ -40,9 +40,46 @@ export const allEasternDivisions = ['Atlantic','Central','Southeast'];
 
 // Western Conference Divisions
 export const northWestDivision = [DEN,MIN,OKC,POR,UTA];
-export const pacificDivision = [GSW,LAC,LAL,PHI,SAC];
+export const pacificDivision = [GSW,LAC,LAL,PHX,SAC];
 export const southWestDivision = [DAL,HOU,MEM,NOP,SAS];
 export const allWesternDivisions = ['Northwest','Pacific','Southwest'];
 
 // All team logos
 export const teamLogos =  [].concat(atlanticDivision,centralDivision,southEastDivision,northWestDivision,pacificDivision,southWestDivision);
+
+export const nbaTeams = new Map([
+  ['ATL', ATL],
+  ['BOS', BOS],
+  ['BKN', BKN],
+  ['CHA', CHA],
+  ['CHI', CHI],
+  ['CLE', CLE],
+  ['DAL', DAL],
+  ['DEN', DEN],
+  ['DET', DET],
+  ['GSW', GSW],
+  ['HOU', HOU],
+  ['IND', IND],
+  ['LAC', LAC],
+  ['LAL', LAL],
+  ['MEM', MEM],
+  ['MIA', MIA],
+  ['MIL', MIL],
+  ['MIN', MIN],
+  ['NOP', NOP],
+  ['NYK', NYK],
+  ['OKC', OKC],
+  ['ORL', ORL],
+  ['PHI', PHI],
+  ['PHX', PHX],
+  ['POR', POR],
+  ['SAC', SAC],
+  ['SAS', SAS],
+  ['TOR', TOR],
+  ['UTA', UTA],
+  ['WAS', WAS]
+]);
+
+export const test = new Map([
+  ['BKN',BKN]
+])

@@ -4,7 +4,6 @@ import { teamLogos } from "../../utils/teamInfo";
 const SomethingWentWrong = () => {
   const randomIndex = Math.floor(Math.random() * teamLogos.length);
   const RandomLogo = teamLogos[randomIndex];
-
   return (
     <div className="flex text-black flex-col items-center justify-center mt-14 h-1/2">
       <RandomLogo size={500} />

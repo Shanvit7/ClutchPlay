@@ -1,14 +1,14 @@
-import handleRequest from "../utils/axiosConfig";
+import { handleRequestForSportsDataIo } from "../utils/axiosConfig";
 
 export const getAllPlayers=()=>{
-    return handleRequest({
+    return handleRequestForSportsDataIo({
         url:`/Players?key=${import.meta.env.VITE_NBA_BASE_API_KEY}`,
         method:'GET'
     });
 };
 
 export const getPlayerInHeadline=(date)=>{
-    return handleRequest({
+    return handleRequestForSportsDataIo({
         url:`/NewsByDate/${date}?key=${import.meta.env.VITE_NBA_BASE_API_KEY}`,
         method:'GET'
     });
