@@ -18,7 +18,7 @@ const Games = () => {
   return (
     <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar />
+        <TopNavbar pageTitle={'Games'}/>
         <GameAlert />
          <GameSection games={todaysGame.data} status={todaysGameStatus} title={`Today's Game`} />
          <GameSection games={tommorrowsGame.data} status={tommorrowsGameStatus} title={`Scheduled Tommorrow`} />

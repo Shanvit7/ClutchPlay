@@ -17,7 +17,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1.1 }}
           transition={{ delay: 0.3, ease: "anticipate" }}
-          className="text-xl text-black text-center lg:text-4xl xl:text-6xl mt-14"
+          className="text-md text-black text-center lg:text-4xl xl:text-6xl mt-14"
         >
           Catch all the NBA action here.
         </motion.h2>
