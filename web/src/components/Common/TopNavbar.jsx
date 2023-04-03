@@ -22,7 +22,7 @@ const TopNavbar = ({ pageTitle }) => {
       <div className="flex-1">
         <div className="flex justify-center hover:bg-transparent active:bg-transparent  ml-4  avatar">
           <div className="w-12 md:w-14  xl:w-20 rounded-full">
-            <img src={basketball} className="flex items-center h-60 w-full" />
+            <img src={basketball} className="flex items-center h-60 w-full" alt='logo'/>
           </div>
         </div>
 

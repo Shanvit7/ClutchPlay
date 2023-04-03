@@ -14,6 +14,7 @@ const Landing = () => {
           <img
             src={logo}
             className="w-60 h-60 xl:w-80 xl:h-80 md:w-72 md:h-72"
+            alt='landing-image'
           />
         </div>
       </motion.div>
@@ -24,7 +25,7 @@ const Landing = () => {
           onClick={() => navigate("/home")}
         >
           Let's dribble
-          <img src={basketball} className="w-8 h-8 ml-2" />
+          <img src={basketball} className="w-8 h-8 ml-2" alt='click here'/>
         </button>
       </motion.div>
     </div>

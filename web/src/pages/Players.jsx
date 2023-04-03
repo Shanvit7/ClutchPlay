@@ -28,7 +28,7 @@ const Players = () => {
             className="card w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
-              <img src="/players.jpg" alt="meet-the-players" />
+              <img src="/players.jpg" alt="meet-the-players"/>
             </figure>
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">

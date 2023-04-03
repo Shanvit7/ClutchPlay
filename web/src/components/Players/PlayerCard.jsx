@@ -6,7 +6,7 @@ const PlayerCard = ({ playerInfo = {} }) => {
 
       <div className="avatar flex justify-center mt-4">
         <div className="w-24 rounded-full ring ring-primary bg-white ring-purple-500 ring-offset-2">
-          <img src={playerInfo.PhotoUrl} />
+          <img src={playerInfo.PhotoUrl} alt='player'/>
         </div>
       </div>
 

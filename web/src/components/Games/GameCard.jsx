@@ -5,7 +5,7 @@ import { determineWinner } from "../../utils/gameInfo";
 import Loader from "../Common/Loader";
 import SomethingWentWrong from "../Error/SomethingWentWrong";
 const NBALogo = () => {
-  return <img src={nbaLogo} className="w-20 h-20" />;
+  return <img src={nbaLogo} className="w-20 h-20" alt='nba-logo'/>;
 };
 const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
   const HomeLogo = nbaTeams.get(gameInfo.home_team?.abbreviation) || NBALogo;

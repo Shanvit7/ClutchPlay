@@ -9,7 +9,7 @@ const GameAlert = () => {
       {areGamesinProgressStatus &&
         <div className="alert shadow-lg bg-slate-100 text-black">
         <div>
-            <img src={nbaLogo} className="w-10 h-10"/>
+            <img src={nbaLogo} className="w-10 h-10" alt='nba-logo'/>
         <div>
           <h3 className="font-bold flex items-center gap-2">
             Game in Progress

@@ -5,7 +5,7 @@ const BackButton = () => {
   return (
     <div className="ml-4 mt-2 hidden xl:block">
       <button className="bg-transparent" onClick={() => navigate(-1)}>
-        <img src={"/back-arrow-svgrepo-com.svg"} className="w-8 h-8" />
+        <img src={"/back-arrow-svgrepo-com.svg"} className="w-8 h-8" alt='back-button'/>
       </button>
     </div>
   );
