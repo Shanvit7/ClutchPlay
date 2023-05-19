@@ -43,10 +43,6 @@ const router = createBrowserRouter([
     element: <Conference />,
   },
   {
-    path: "/statistics",
-    element: <CommingSoon />,
-  },
-  {
     path: "/stadiums",
     element: <Stadiums />,
   },

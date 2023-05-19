@@ -24,9 +24,6 @@ const SideBarWrapper = ({ children }) => {
           <li onClick={() => navigate("/stadiums")}>
             <a className="hover:text-white">Stadiums</a>
           </li>
-          <li onClick={() => navigate("/statistics")}>
-            <a className="hover:text-white">Statistics</a>
-          </li>
           <li onClick={() => navigate("/lakers-75")}>
             <a className="hover:text-white">Lakers 75th Anniversary</a>
           </li>
