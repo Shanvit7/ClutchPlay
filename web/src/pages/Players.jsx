@@ -33,7 +33,7 @@ const Players = () => {
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary bg-black hover:text-black hover:bg-white"
                   onClick={() => navigate("/meet-the-players")}
                 >
                   Meet the Players
@@ -54,7 +54,7 @@ const Players = () => {
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary bg-black hover:text-black hover:bg-white"
                   onClick={() => navigate("/player-in-headline")}
                 >
                   Player In Today's Headline

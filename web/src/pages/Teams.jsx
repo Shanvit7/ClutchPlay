@@ -32,7 +32,7 @@ const Teams = () => {
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary bg-black hover:text-black hover:bg-white"
                   onClick={() => navigate("/teams/eastern")}
                 >
                   Eastern Conference
@@ -53,7 +53,7 @@ const Teams = () => {
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary bg-black hover:text-black hover:bg-white"
                   onClick={() => navigate("/teams/western")}
                 >
                   Western Conference
