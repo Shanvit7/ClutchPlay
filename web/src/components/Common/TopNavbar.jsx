@@ -1,5 +1,4 @@
 import React from "react";
-import basketball from "/basketball2.svg";
 const TopNavbar = ({ pageTitle }) => {
   return (
     <div className="navbar bg-black">
