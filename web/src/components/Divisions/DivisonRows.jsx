@@ -2,7 +2,7 @@ import React from "react";
 const DivisionRows = ({ team = {} }) => {
   return (
     <tr>
-      <td style={{ backgroundColor: `#${team.SecondaryColor}` }}>
+      <td className="bg-black">
         <div className="flex items-center space-x-3">
           <div className="flex items-center space-x-3">
             <div className="mask w-14 h-14">
@@ -16,7 +16,6 @@ const DivisionRows = ({ team = {} }) => {
           <div>
             <div
               className="font-bold"
-              style={{ color: `#${team.PrimaryColor}` }}
             >
               {team.City} {team.Name}
             </div>
@@ -25,19 +24,13 @@ const DivisionRows = ({ team = {} }) => {
       </td>
 
       <td
-        style={{
-          backgroundColor: `#${team.SecondaryColor}`,
-          color: `#${team.PrimaryColor}`,
-        }}
+      className="bg-black"
       >
         NBA Team ID : {team.NbaDotComTeamID}
       </td>
 
       <th
-        style={{
-          backgroundColor: `#${team.SecondaryColor}`,
-          color: `#${team.PrimaryColor}`,
-        }}
+      className="bg-black"
       >
         <button className="btn btn-ghost hover:bg-transparent btn-xs">
           Comming Soon
