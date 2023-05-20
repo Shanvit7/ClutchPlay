@@ -48,7 +48,7 @@ const Home = () => {
           transition={{ delay: 0.8, ease: "easeInOut" }}
         >
           <div className="hero-content flex-col lg:flex-row bg-black overflow-x-hidden">
-            <img src="/lakers.jpg" className="max-w-sm rounded-lg shadow-2xl" alt='logo'/>
+            <img src="/lakers/lakers@75.jpg" className="max-w-sm rounded-lg shadow-2xl" alt='logo'/>
             <div>
               <h1 className="text-5xl font-bold">
                 Celebrating 75 Years of Lakers
