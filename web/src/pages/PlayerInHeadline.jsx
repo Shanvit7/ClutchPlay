@@ -23,7 +23,7 @@ const PlayerInHeadline = () => {
         {isLoading ? (
           <Loader />
         ) : isSuccess ? (
-          news.length === 0 || true ? (
+          news.length === 0 ? (
             <div className="flex flex-col justify-center items-center w-full h-1/2 text-3xl lg:text-5xl xl:text-5xl">
               <div>Nothing exciting happened recently 🙁.</div>
               <div className="mt-8">

@@ -3,11 +3,11 @@ import nbaLogo from "/nba.svg";
 import { areGamesinProgress } from "../../services/gameService";
 import { useQuery } from "react-query";
 const GameAlert = () => {
-  const {data: areGamesinProgressStatus} = useQuery('areGamesInProgresss',areGamesinProgress);
+  const {data: areGamesinProgressStatus} = useQuery('areGamesInProgress',areGamesinProgress);
   return (
     <Fragment>
       {areGamesinProgressStatus &&
-        <div className="alert shadow-lg bg-slate-100 text-black">
+        <div className="alert shadow-lg bg-success">
         <div>
             <img src={nbaLogo} className="w-10 h-10" alt='nba-logo'/>
         <div>
@@ -22,7 +22,7 @@ const GameAlert = () => {
         </div>
       </div>
       <div className="flex-none">
-        <button className="btn btn-sm bg-black text-slate-100">
+        <button className="btn btn-sm bg-black hover:text-black hover:bg-white">
             Comming Soon
         </button>
       </div>

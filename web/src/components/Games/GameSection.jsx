@@ -13,12 +13,12 @@ const GameSection = ({title,games=[],status}) =>{
           <div className="btn-group flex justify-center gap-4 mt-4">
             {
                 status === 'success' && currentViewedGame !== 0 && 
-                <button onClick={prevGame} className="btn btn-outline hover:bg-yellow-400 hover:text-black">
+                <button onClick={prevGame} className="btn btn-outline">
                  Previous
                 </button>
             }
             {
-              status === 'success' && currentViewedGame < games.length - 1 && <button onClick={nextGame} className="btn btn-outline hover:bg-yellow-400 hover:text-black">
+              status === 'success' && currentViewedGame < games.length - 1 && <button onClick={nextGame} className="btn btn-outline">
               Next
               </button>
             }
