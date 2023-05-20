@@ -15,6 +15,7 @@ import Teams from "./pages/Teams";
 import Conference from "./pages/Conference";
 import Games from './pages/Games';
 import Stadiums from "./pages/Stadiums";
+import LakersCelebration from "./pages/LakersCelebration";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/lakers-75",
-    element: <CommingSoon />,
+    element: <LakersCelebration />,
   },
   {
     path: "/player-in-headline",

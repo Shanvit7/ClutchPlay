@@ -28,7 +28,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, ease: "backIn" }}
         >
-          Games, Players, Stats and much more.
+          Games, Players and much more.
         </motion.h3>
 
         <motion.div
@@ -62,7 +62,7 @@ const Home = () => {
                 className="btn btn-primary border-white"
                 onClick={() => navigate("/lakers-75")}
               >
-                Know more
+                Know the journey
               </button>
             </div>
           </div>

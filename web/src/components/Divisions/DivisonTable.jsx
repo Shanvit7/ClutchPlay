@@ -8,7 +8,7 @@ const DivisionTable = ({ divisionName, teamData }) => {
   return (
     <div className="flex flex-col w-full">
       <h2 className="text-black text-3xl mt-32 ml-4">{divisionName}</h2>
-      <div className="divider before:bg-fuchsia-500 after:bg-yellow-400"></div>
+      <div className="divider before:bg-fuchsia-500 after:bg-yellow-400" />
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <tbody>

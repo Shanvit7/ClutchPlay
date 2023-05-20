@@ -8,7 +8,7 @@ const GameSection = ({title,games=[],status}) =>{
     return(
         <section className="mt-14">
           <h1 className="text-black text-4xl pl-4">{title}</h1>
-          <div className="divider"></div>
+          <div className="divider" />
           <GameCard gameInfo={games[currentViewedGame]} status={status} areNogamesScheduled={games.length===0}/>
           <div className="btn-group flex justify-center gap-4 mt-4">
             {

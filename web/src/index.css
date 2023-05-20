@@ -85,6 +85,21 @@ button:focus-visible {
   background:#535bf2;
 }
 
+.parallax {
+  background-image: url('lakers75.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.parallax-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
 @media screen and (max-width:500px) {
   ::-webkit-scrollbar {
