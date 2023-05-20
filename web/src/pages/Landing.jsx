@@ -1,34 +1,71 @@
-import React from "react";
-import LandingCarousel from "../components/Landing/LandingCarousel";
-import { motion } from "framer-motion";
-import logo from "/logo.png";
-import basketball from "/basketball.svg";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const Landing = () => {
-  const navigate = useNavigate();
-  return (
-    <div className="w-screen h-screen bg-gray-50 overflow-hidden">
-      <LandingCarousel />
-      <motion.div className="flex w-full justify-center z-10 absolute top-20 font-thin">
-        <div>
-          <img
-            src={logo}
-            className="w-60 h-60 xl:w-80 xl:h-80 md:w-72 md:h-72"
-            alt='landing-image'
-          />
-        </div>
-      </motion.div>
+import { motion } from "framer-motion";
+import { useSpring, animated } from "@react-spring/web";
 
-      <motion.div className="flex w-full justify-center z-10 absolute top-3/4">
-        <button
-          className="flex btn glass align-center hover:animate-bounce text-white font-thin w-9/12 xl:w-2/4 text-xl whitespace-nowrap"
-          onClick={() => navigate("/home")}
+const Landing = () => {
+  const animationProps = useSpring({
+    backgroundColor: "#0000000",
+    from: { backgroundColor: "#FF6E00" },
+    config: { duration: 3000 },
+  });
+  const [bounceTheBall, setBounceTheBall] = useState(false);
+  const navigate = useNavigate();
+  const goToHomePage=()=>{
+    navigate('/home');
+  };
+  const dribbleTheBall=()=>{
+    setBounceTheBall(true);
+  };
+  return (
+    <animated.div
+      style={animationProps}
+      className="h-screen w-screen  overflow-hidden"
+    >
+      <div className="flex h-screen justify-center items-center">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center"
         >
-          Let's dribble
-          <img src={basketball} className="w-8 h-8 ml-2" alt='click here'/>
-        </button>
-      </motion.div>
-    </div>
+          <motion.img
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            onAnimationComplete={dribbleTheBall}
+            className={`w-32 h-32 mb-4 ${bounceTheBall && "animate-bounce"}`}
+            src="basketball2.svg"
+            alt="Basketball"
+          />
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="text-white text-center text-4xl font-bold mb-4"
+          >
+            ClutchPlay
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1.5 }}
+            className="text-white text-lg text-center"
+          >
+            Stay Ahead of the Game
+          </motion.p>
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1.8 }}
+            className="btn btn-primary mt-14 hover:text-black hover:bg-white"
+            onClick={goToHomePage}
+          >
+            Let's Dribble
+          </motion.button>
+        </motion.div>
+      </div>
+    </animated.div>
   );
 };
 
