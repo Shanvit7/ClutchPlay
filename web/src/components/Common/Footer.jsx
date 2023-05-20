@@ -1,8 +1,8 @@
 import React from "react";
-import reactJS from "/reactjs.svg";
-import viteJS from "/vitejs.svg";
-import tailwindCSS from "/tailwindcss.svg";
-import reactQuery from '/reactQuery.svg';
+import reactJS from "/footer/reactjs.svg";
+import viteJS from "/footer/vitejs.svg";
+import tailwindCSS from "/footer/tailwindcss.svg";
+import reactQuery from '/footer/reactQuery.svg';
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-primary text-primary-content relative bottom-0 mt-40">

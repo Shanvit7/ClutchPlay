@@ -6,7 +6,7 @@ const LandingCarousel = () => {
         id="slide1"
         className="carousel-item relative object-contain bg-center w-full h-full"
       >
-        <img src={"/photo3.jpg"} className="w-full h-screen" alt='landing-page-image'/>
+        <img src={"/landing/photo3.jpg"} className="w-full h-screen" alt='landing-page-image'/>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a
             href="#slide4"
@@ -27,7 +27,7 @@ const LandingCarousel = () => {
         id="slide2"
         className="carousel-item relative object-contain bg-center w-full h-full"
       >
-        <img src={"/photo2.jpg"} className="w-full h-screen" alt='landing-page-image'/>
+        <img src={"/landing/photo2.jpg"} className="w-full h-screen" alt='landing-page-image'/>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a
             href="#slide1"
@@ -48,7 +48,7 @@ const LandingCarousel = () => {
         id="slide3"
         className="carousel-item relative object-contain bg-center w-full h-full"
       >
-        <img src={"/photo5.jpg"} className="w-full h-screen" alt='landing-page-image'/>
+        <img src={"/landing/photo5.jpg"} className="w-full h-screen" alt='landing-page-image'/>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a
             href="#slide2"
@@ -69,7 +69,7 @@ const LandingCarousel = () => {
         id="slide4"
         className="carousel-item relative object-contain bg-center w-full h-full"
       >
-        <img src={"/photo4.jpg"} className="w-full h-screen" alt='landing-page-image'/>
+        <img src={"/landing/photo4.jpg"} className="w-full h-screen" alt='landing-page-image'/>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a
             href="#slide3"

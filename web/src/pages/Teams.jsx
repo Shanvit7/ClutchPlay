@@ -27,7 +27,7 @@ const Teams = () => {
             className="card w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
-              <img src="/eastern.jpg" alt="western" />
+              <img src="/conference/eastern.jpg" alt="western" />
             </figure>
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
@@ -48,7 +48,7 @@ const Teams = () => {
             className="card w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
-              <img src="/western.jpg" alt="eastern" />
+              <img src="/conference/western.jpg" alt="eastern" />
             </figure>
             <div className="card-body">
               <div className="card-actions justify-center flex flex-col items-center h-full">
