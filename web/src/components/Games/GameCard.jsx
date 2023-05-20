@@ -56,7 +56,7 @@ const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
         <div className="stat-desc text-center font-bold">
           {gameInfo.status === "Final" && determineWinner(gameInfo)}
         </div>
-        <button className="place-self-center btn btn-sm bg-black text-slate-100 xl:w-2/4">
+        <button className="place-self-center btn btn-sm bg-black hover:bg-white hover:text-black xl:w-2/4">
           Comming Soon
         </button>
       </div>
