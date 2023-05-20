@@ -86,7 +86,7 @@ button:focus-visible {
 }
 
 .parallax {
-  background-image: url('lakers75.jpg');
+  background-image: url('/lakers75.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
