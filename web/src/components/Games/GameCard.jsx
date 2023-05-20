@@ -11,7 +11,7 @@ const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
   const HomeLogo = nbaTeams.get(gameInfo.home_team?.abbreviation) || NBALogo;
   const AwayLogo = nbaTeams.get(gameInfo.visitor_team?.abbreviation) || NBALogo;
   return (
-     <div className="stats bg-white text-black w-full shadow mt-4">
+     <div className="stats bg-black w-full shadow mt-4">
       {
         status === 'loading'
         ?
@@ -53,7 +53,7 @@ const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
           {gameInfo.home_team?.abbreviation || "Team Home"} vs{" "} 
           {gameInfo.visitor_team?.abbreviation || "Team Away"}
         </div>
-        <div className="stat-desc text-center font-bold text-black">
+        <div className="stat-desc text-center font-bold">
           {gameInfo.status === "Final" && determineWinner(gameInfo)}
         </div>
         <button className="place-self-center btn btn-sm bg-black text-slate-100 xl:w-2/4">

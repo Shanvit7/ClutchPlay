@@ -7,7 +7,7 @@ const GameSection = ({title,games=[],status}) =>{
     const nextGame = () => setCurrentViewedGame(currentViewedGame + 1);
     return(
         <section className="mt-14">
-          <h1 className="text-black text-4xl pl-4">{title}</h1>
+          <h1 className="text-4xl pl-4">{title}</h1>
           <div className="divider" />
           <GameCard gameInfo={games[currentViewedGame]} status={status} areNogamesScheduled={games.length===0}/>
           <div className="btn-group flex justify-center gap-4 mt-4">

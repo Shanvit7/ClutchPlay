@@ -12,7 +12,7 @@ const NewsCard = ({ newsItem }) => {
 
   return (
     <div className="flex flex-col items-center justify-center mt-14 xl:mt-0">
-      <div className="hero w-full xl:w-1/2 h-full bg-base-200">
+      <div className="hero w-full xl:w-1/2 h-full bg-black border-2">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">{newsItem.Title}</h1>
@@ -26,14 +26,14 @@ const NewsCard = ({ newsItem }) => {
             <div className="flex flex-col h-36 justify-around xl:flex-row xl:h-20 lg:flex-row">
               {newsItem.OriginalSource && (
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary hover:bg-white hover:text-black"
                   onClick={visitOriginalSourceUrl}
                 >
                   Visit {newsItem.OriginalSource}
                 </button>
               )}
               {newsItem.Source && (
-                <button className="btn btn-primary" onClick={visitSource}>
+                <button className="btn btn-primary hover:bg-white hover:text-black" onClick={visitSource}>
                   Visit {newsItem.Source}
                 </button>
               )}

@@ -8,7 +8,7 @@ import ShowEra from "../components/Lakers@75/ShowEra";
 const LakersCelebration = () => {
   const [currentEraId , setCurrentEraId] = useState(1);
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Lakers@75"} />
         <div className="parallax">

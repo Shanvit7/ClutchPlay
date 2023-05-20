@@ -5,7 +5,7 @@ import tailwindCSS from "/footer/tailwindcss.svg";
 import reactQuery from '/footer/reactQuery.svg';
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 bg-primary text-primary-content relative bottom-0 mt-40">
+    <footer className="footer border-t-2 footer-center p-10 bg-black text-primary-content relative bottom-0 mt-40">
       <div className="cursor-pointer">
         <a
           href="https://github.com/Shanvit7/ClutchPlay"

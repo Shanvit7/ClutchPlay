@@ -8,14 +8,14 @@ import { motion } from "framer-motion";
 const Players = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Players"} />
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1, ease: "easeInOut" }}
-          className="text-black mt-20 ml-8"
+          className="mt-20 ml-8"
         >
           Know all about NBA Players
         </motion.h1>

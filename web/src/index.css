@@ -73,16 +73,16 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar {
- background: yellow;
+ background:#ccccff;
  width: 0.6rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background:#ccccff;
+  background: #f28c18;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background:#535bf2;
+  background: #804b06;
 }
 
 .parallax {

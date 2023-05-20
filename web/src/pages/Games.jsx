@@ -16,7 +16,7 @@ const Games = () => {
   const {data : yesterdaysGame={},status :yesterdaysGameStatus} = useQuery('yesterDaysGame',()=>getGamesByDate(formattedDate(yesterdaysDate),formattedDate(yesterdaysDate)));
   const {data : tommorrowsGame={},status : tommorrowsGameStatus} = useQuery('tommorowsGame',()=>getGamesByDate(formattedDate(tommorrowsDate),formattedDate(tommorrowsDate)));
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={'Games'}/>
         <GameAlert />

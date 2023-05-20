@@ -16,15 +16,15 @@ const PlayerInHeadline = () => {
     isSuccess,
   } = useQuery('playersInNews',()=>getPlayerInHeadline(formattedDate()));
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Player In Today's News"} />
         <BackButton />
         {isLoading ? (
           <Loader />
         ) : isSuccess ? (
-          news.length === 0 ? (
-            <div className="flex flex-col justify-center items-center text-black w-full h-1/2 text-3xl lg:text-5xl xl:text-5xl">
+          news.length === 0 || true ? (
+            <div className="flex flex-col justify-center items-center w-full h-1/2 text-3xl lg:text-5xl xl:text-5xl">
               <div>Nothing exciting happened recently 🙁.</div>
               <div className="mt-8">
                 We will be back soon with a headline ⛹️‍♂️.

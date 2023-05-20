@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 const Teams = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Teams"} />
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1, ease: "easeInOut" }}
-          className="text-black mt-20 ml-8"
+          className="mt-20 ml-8"
         >
           Conference
         </motion.h1>

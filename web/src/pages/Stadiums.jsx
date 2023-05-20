@@ -16,7 +16,7 @@ const Stadiums = () => {
     isSuccess,
   } = useQuery("allNBAStadiums", getAllNBAStadiums);
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Stadiums"} />
         {isLoading ? (
@@ -27,18 +27,10 @@ const Stadiums = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1, ease: "easeInOut" }}
-              className="text-black mt-20 ml-8"
+              className="mt-20 ml-8"
             >
               NBA Arenas
             </motion.h1>
-            <div className="flex w-full justify-center mt-14">
-              <input
-                type="text"
-                placeholder="Coming Soon"
-                className="input input-bordered mt-14 bg-black w-full text-violet-50 max-w-xs xl:mt-0"
-                disabled
-              />
-            </div>
             <div className="flex flex-col justify-center items-center gap-14 mt-14">
               {allNBAStadiums.map((stadium, index) => {
                 return <StadiumCard stadiumInfo={stadium} key={index} />;

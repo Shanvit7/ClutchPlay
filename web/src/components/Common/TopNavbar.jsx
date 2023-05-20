@@ -2,7 +2,7 @@ import React from "react";
 import basketball from "/basketball2.svg";
 const TopNavbar = ({ pageTitle }) => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-black">
       <div className="flex-none">
         <label
           htmlFor="my-drawer"
@@ -20,13 +20,7 @@ const TopNavbar = ({ pageTitle }) => {
         </label>
       </div>
       <div className="flex-1">
-        <div className="flex justify-center hover:bg-transparent active:bg-transparent  ml-4  avatar">
-          <div className="w-12 md:w-14  xl:w-20 rounded-full">
-            <img src={basketball} className="flex items-center h-60 w-full" alt='logo'/>
-          </div>
-        </div>
-
-        <h1 className="text-sm xl:text-5xl ml-4 capitalize">
+        <h1 className="text-sm xl:text-3xl ml-4 capitalize">
           {pageTitle || "Clutch Play"}
         </h1>
       </div>

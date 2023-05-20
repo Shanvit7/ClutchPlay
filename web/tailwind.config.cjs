@@ -15,9 +15,8 @@ module.exports = {
     base: true,
     utils: true,
     themes: [{
-      cyberpunk:{
-        ...require("daisyui/src/colors/themes")["[data-theme=cyberpunk]"],
-         primary:'black',
+      halloween:{
+        ...require("daisyui/src/colors/themes")["[data-theme=halloween"],
          '.custom-card':{
           'background-color':'transparent',
           'color':'white',

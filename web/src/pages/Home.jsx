@@ -9,21 +9,20 @@ import { LAL } from "react-nba-logos";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Home"} />
-
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1.1 }}
           transition={{ delay: 0.3, ease: "anticipate" }}
-          className="text-md text-black text-center lg:text-4xl xl:text-6xl mt-14"
+          className="text-md text-center lg:text-4xl xl:text-6xl mt-14"
         >
           Catch all the NBA action here.
         </motion.h2>
 
         <motion.h3
-          className="text-black text-center mt-8"
+          className="text-center mt-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, ease: "backIn" }}
@@ -42,12 +41,12 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          className="hero bg-gray-50 mt-8"
+          className="hero mt-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, ease: "easeInOut" }}
         >
-          <div className="hero-content flex-col lg:flex-row bg-black overflow-x-hidden">
+          <div className="hero-content flex-col lg:flex-row border-4 border-white overflow-x-hidden">
             <img src="/lakers/lakers@75.jpg" className="max-w-sm rounded-lg shadow-2xl" alt='logo'/>
             <div>
               <h1 className="text-5xl font-bold">
@@ -59,7 +58,7 @@ const Home = () => {
                 season.
               </p>
               <button
-                className="btn btn-primary border-white"
+                className="btn btn-primary border-white hover:bg-white hover:text-black"
                 onClick={() => navigate("/lakers-75")}
               >
                 Know the journey

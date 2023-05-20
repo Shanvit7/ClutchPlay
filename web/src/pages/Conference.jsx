@@ -15,7 +15,7 @@ const Conference = () => {
   const { conferenceId } = useParams();
   const { data: teamData = [], isLoading, isSuccess } = useQuery('teams',getAllTeams);
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={`Teams of ${conferenceId} Conference`} />
         <BackButton />
@@ -27,7 +27,7 @@ const Conference = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1, ease: "easeInOut" }}
-              className="text-black mt-20 ml-8 capitalize"
+              className="mt-20 ml-8 capitalize"
             >
               {conferenceId} Conference Divisions
             </motion.h1>

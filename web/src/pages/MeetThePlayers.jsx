@@ -11,23 +11,13 @@ import { getAllPlayers } from "../services/playerService";
 const MeetThePlayers = () => {
   const { data: players =[],isLoading,isSuccess} = useQuery('players',getAllPlayers);
   return (
-    <div className="w-screen h-screen bg-gray-50 overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Meet The Players"} />
         <BackButton />
         {isLoading ? (
           <Loader />
         ) : isSuccess ? (
-          <>
-            <div className="flex w-full justify-center">
-              <input
-                type="text"
-                placeholder="Coming Soon"
-                className="input input-bordered mt-14 bg-black w-full text-violet-50 max-w-xs xl:mt-0"
-                disabled
-              />
-            </div>
-
             <div className="flex justify-center mt-14">
               <div className="inline-grid gap-14 xl:gap-24 lg:gap-20 grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3">
                 {players.map((player, key) => {
@@ -35,7 +25,6 @@ const MeetThePlayers = () => {
                 })}
               </div>
             </div>
-          </>
         ) : (
           <SomethingWentWrong />
         )}
