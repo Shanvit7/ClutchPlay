@@ -85,20 +85,11 @@ button:focus-visible {
   background: #804b06;
 }
 
-.parallax {
-  background-image: url('/lakers/kbryant.jpg');
+.parallax-content{
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
-
-.parallax-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  background-size: cover; 
 }
 
 @media screen and (max-width:500px) {

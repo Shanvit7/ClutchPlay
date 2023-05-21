@@ -1,30 +1,32 @@
-import React,{useState} from "react";
+import React from "react";
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
-import LakersTimelineStepper from "../components/Stepper/LakersTimelineStepper";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ShowEra from "../components/Lakers@75/ShowEra";
+import { lakersTimeLine } from "../utils/lakersTimeline";
 
 const LakersCelebration = () => {
-  const [currentEraId , setCurrentEraId] = useState(1);
   return (
-    <div className="w-screen h-screen bg-black overflow-x-hidden">
+    <div className="overflow-hidden h-screen w-screen  bg-black">
+      <Parallax pages={10}>
       <SideBarWrapper>
-        <TopNavbar pageTitle={"Lakers@75"} />
-        <div className="parallax">
-          <div className="parallax-content">
-            <h1 className="text-100 text-5xl font-bold">
-              Let's take a trip down the memory lane
-            </h1>
-          </div>
-        </div>
-        <div className="pt-20 text-center">
-          <LakersTimelineStepper setCurrentEraId={setCurrentEraId} currentEraId={currentEraId} />
-        </div>
-        <div className="divider" />
-        <ShowEra selectedEraId={currentEraId} />
-        <Footer />
-      </SideBarWrapper>
+        <ParallaxLayer>
+         <TopNavbar />
+         <h1 className="text-center font-bold mt-14">Witness the rise</h1>
+        </ParallaxLayer>
+        </SideBarWrapper>
+          <ParallaxLayer offset={1} speed={1} factor={2}>
+            <div className="h-full flex justify-center parallax-content" style={{ backgroundImage:`url('/lakers/kbryant.jpg')` }}>
+              <h1 className="text-center mt-32">Let's take a trip down the memory lane</h1>
+            </div>
+          </ParallaxLayer>
+        {
+          lakersTimeLine.map((timeEra,index)=>(
+            <ShowEra timeEra={timeEra} key={index} />
+          ))
+        }
+      </Parallax>
     </div>
   );
 };

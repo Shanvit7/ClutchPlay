@@ -3,9 +3,9 @@ import reactJS from "/footer/reactjs.svg";
 import viteJS from "/footer/vitejs.svg";
 import tailwindCSS from "/footer/tailwindcss.svg";
 import reactQuery from '/footer/reactQuery.svg';
-const Footer = () => {
+const Footer = ({noSpace}) => {
   return (
-    <footer className="footer border-t-2 footer-center p-10 bg-black text-primary-content relative bottom-0 mt-40">
+    <footer className={`footer border-t-2 footer-center p-10 bg-black text-primary-content relative bottom-0 ${!noSpace && 'mt-40'}`}>
       <div className="cursor-pointer">
         <a
           href="https://github.com/Shanvit7/ClutchPlay"
