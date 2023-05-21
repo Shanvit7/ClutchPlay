@@ -10,13 +10,13 @@ const ShowEra = ({ timeEra }) => {
           <h2 className="text-center">{timeEra.period}</h2>
           {
             timeEra.points.map((point,index)=>(
-              <div key={index} className="p-2 flex flex-col lg:flex-row">
+              <div key={index} className="p-2 flex mt-4 flex-col lg:flex-row">
               <img
                 src={point.imgSrc}
                 className="max-w-sm rounded-lg shadow-2xl"
                 alt="logo"
               />
-              <p className="flex flex-col p-8 justify-center items-center text-3xl">
+              <p className="flex flex-col p-2 justify-center items-center text-xs lg:text-2xl lg:p-8">
                 {point.description}
               </p>
             </div>
