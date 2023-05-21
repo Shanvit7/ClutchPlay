@@ -6,8 +6,10 @@ const ShowEra = ({ timeEra }) => {
     <>
       <ParallaxLayer offset={timeEra.id + 1} speed={1.5}>
         <div className={`h-full flex flex-col bg-black`}>
-          <h1 className="mt-32 text-center">{timeEra.title}</h1>
-          <h2 className="text-center">{timeEra.period}</h2>
+          <div className="py-32">
+           <h1 className="text-center font-bold">{timeEra.title}</h1>
+           <h2 className="text-center mt-8 text-xl">{timeEra.period}</h2>
+          </div>
           {
             timeEra.points.map((point,index)=>(
               <div key={index} className="p-2 flex mt-4 flex-col lg:flex-row">
@@ -25,7 +27,7 @@ const ShowEra = ({ timeEra }) => {
           {timeEra.id === 7
            &&
           <>
-          <blockquote className="border-l-4 flex flex-col justify-center items-center border-gray-400 pl-4 italic my-4 mt-14">
+          <blockquote className="border-l-4 flex flex-col justify-center items-center border-gray-400 pl-4 italic my-4 mt-32">
               <p className="mb-2">
               I'm here. I'm not going anywhere. No matter what the injury -- unless it's completely debilitating -- I'm going to be the same player I've always been. I'll figure it out. I'll make some tweaks, some changes, but I'm still coming.
               </p>
