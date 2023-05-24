@@ -6,6 +6,7 @@ import ShowEra from "../components/Lakers@75/ShowEra";
 import { lakersTimeLine } from "../utils/lakersTimeline";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { LAL } from 'react-nba-logos';
 
 const LakersCelebration = () => {
   const [ref, inView] = useInView({
@@ -22,6 +23,13 @@ const LakersCelebration = () => {
             <motion.div
               className="flex flex-col justify-center items-center h-full"
             >
+              <motion.div
+              initial={{opacity:0}}
+              animate={{opacity:1}}
+              transition={{delay:0.5,duration: 2}}
+              >
+               <LAL size={300}/>
+              </motion.div>
               <motion.h1 
                initial={{ opacity: 0 }}
                animate={{ opacity: 1,scale: 1.2 }}
