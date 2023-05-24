@@ -27,7 +27,7 @@ const Conference = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1, ease: "easeInOut" }}
-              className="mt-20 ml-8 capitalize"
+              className="mt-20 ml-8 capitalize text-xl lg:text-5xl mt-32 ml-4"
             >
               {conferenceId} Conference Divisions
             </motion.h1>

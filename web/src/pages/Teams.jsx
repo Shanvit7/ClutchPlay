@@ -14,17 +14,17 @@ const Teams = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1, ease: "easeInOut" }}
-          className="mt-20 ml-8"
+          className="mt-20 ml-8 text-3xl lg:text-5xl"
         >
           Conference
         </motion.h1>
 
-        <div className="flex flex-col h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
+        <div className="flex flex-col gap-14 h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:gap-0 xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, ease: "easeInOut" }}
-            className="card w-96 shadow-xl image-full before:custom-card"
+            className="card w-80 lg:w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
               <img src="/conference/eastern.jpg" alt="western" />
@@ -45,7 +45,7 @@ const Teams = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, ease: "easeInOut" }}
-            className="card w-96 shadow-xl image-full before:custom-card"
+            className="card w-80 lg:w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
               <img src="/conference/western.jpg" alt="eastern" />

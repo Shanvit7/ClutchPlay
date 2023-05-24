@@ -15,7 +15,7 @@ const Players = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1, ease: "easeInOut" }}
-          className="mt-20 ml-8"
+          className="mt-20 ml-8 text-3xl lg:text-5xl"
         >
           Know all about NBA Players
         </motion.h1>
@@ -25,7 +25,7 @@ const Players = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, ease: "easeInOut" }}
-            className="card w-96 shadow-xl image-full before:custom-card"
+            className="card  w-80 lg:w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
               <img src="/players/meet-the-players.jpg" alt="meet-the-players"/>
@@ -46,7 +46,7 @@ const Players = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, ease: "easeInOut" }}
-            className="card w-96 shadow-xl image-full before:custom-card"
+            className="card w-80 lg:w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
               <img src="/players/players-in-headline.jpg" alt="player-in-todays-headline" />

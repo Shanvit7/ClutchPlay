@@ -9,33 +9,19 @@ const DivisionRows = ({ team = {} }) => {
               <img
                 src={team.WikipediaLogoUrl}
                 alt={team.Name}
-                className="w-14 h-14"
+                className="w-14 h-14 bg-white"
               />
             </div>
           </div>
           <div>
             <div
-              className="font-bold"
+              className="font-bold text-xs lg:text-2xl"
             >
               {team.City} {team.Name}
             </div>
           </div>
         </div>
       </td>
-
-      <td
-      className="bg-black"
-      >
-        NBA Team ID : {team.NbaDotComTeamID}
-      </td>
-
-      <th
-      className="bg-black"
-      >
-        <button className="btn btn-ghost hover:bg-transparent btn-xs">
-          Comming Soon
-        </button>
-      </th>
     </tr>
   );
 };

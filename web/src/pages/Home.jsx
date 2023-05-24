@@ -16,7 +16,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1.1 }}
           transition={{ delay: 0.3, ease: "anticipate" }}
-          className="text-md text-center lg:text-4xl xl:text-6xl mt-14"
+          className="text-2xl text-center lg:text-4xl mt-14"
         >
           Catch all the NBA action here.
         </motion.h2>
@@ -47,12 +47,12 @@ const Home = () => {
           transition={{ delay: 0.8, ease: "easeInOut" }}
         >
           <div className="hero-content flex-col lg:flex-row border-4 border-white overflow-x-hidden">
-            <img src="/lakers/lakers@75.jpg" className="max-w-sm rounded-lg shadow-2xl" alt='logo'/>
+            <img src="/lakers/lakers@75.jpg" className="max-w-xs lg:max-w-md rounded-lg shadow-2xl" alt='logo'/>
             <div>
-              <h1 className="text-5xl font-bold">
+              <h1 className="font-bold lg:text-3xl">
                 Celebrating 75 Years of Lakers
               </h1>
-              <p className="flex items-center py-6">
+              <p className="flex items-center py-6 text-md lg:text-2xl">
                 From Minneapolis to Los Angeles and 17 NBA Championships later,
                 the Lakers are entering into their 75th year this 2022-23
                 season.

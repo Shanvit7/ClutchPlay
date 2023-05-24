@@ -27,7 +27,7 @@ const Stadiums = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1, ease: "easeInOut" }}
-              className="mt-20 ml-8"
+              className="mt-20 ml-8 text-3xl lg:text-5xl"
             >
               NBA Arenas
             </motion.h1>

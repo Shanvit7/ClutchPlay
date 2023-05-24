@@ -7,9 +7,9 @@ const DivisionTable = ({ divisionName, teamData }) => {
   });
   return (
     <div className="flex flex-col w-full">
-      <h2 className="text-3xl mt-32 ml-4">{divisionName}</h2>
+      <h2 className="text-md lg:text-3xl mt-32 ml-4">{divisionName}</h2>
       <div className="divider" />
-      <div className="overflow-x-auto w-full">
+      <div className="overflow-x-hidden w-full">
         <table className="table w-full">
           <tbody>
             {divisionTeams.map((team, key) => (

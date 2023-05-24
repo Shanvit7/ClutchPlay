@@ -1,7 +1,7 @@
 import React from "react";
 const PlayerCard = ({ playerInfo = {} }) => {
   return (
-    <div className="card card-compact w-96 xl:w-80 lg:w-72 md:w-56 border-4 shadow-xl">
+    <div className="card card-compact w-80 lg:w-96 border-4 shadow-xl">
       <div className={`badge badge-success gap-2`}>{playerInfo.Status}</div>
       <div className="avatar flex justify-center mt-4">
         <div className="w-24 rounded-full ring ring-primary bg-white ring-purple-500 ring-offset-2">
