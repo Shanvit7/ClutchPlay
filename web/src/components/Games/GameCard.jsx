@@ -46,7 +46,7 @@ const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
       </div>
 
       <div className="stat pl-0 pr-0 xl:pl-6 xl:pr-6 lg:pl-4 lg:pr-4">
-        <div className="stat-title text-center font-bold text-md xl:text-4xl lg:text-2xl">
+        <div className="stat-title text-center font-bold text-md text-xxs lg:text-4xl">
           {gameInfo.status || "TBD"}
         </div>
         <div className="stat-value text-center font-bold text-sm xl:text-4xl lg:text-2xl">

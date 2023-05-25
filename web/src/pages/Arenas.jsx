@@ -2,23 +2,23 @@ import React from "react";
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
-import StadiumCard from "../components/Stadiums/StadiumCard";
+import ArenaCard from "../components/Arenas/ArenaCard";
 import { useQuery } from "react-query";
-import { getAllNBAStadiums } from "../services/stadiumService";
+import { getAllNBAArenas } from "../services/ArenaService";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import { motion } from "framer-motion";
 
-const Stadiums = () => {
+const Arenas = () => {
   const {
-    data: allNBAStadiums = [],
+    data: allNBAArenas = [],
     isLoading,
     isSuccess,
-  } = useQuery("allNBAStadiums", getAllNBAStadiums);
+  } = useQuery("allNBAArenas", getAllNBAArenas);
   return (
     <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar pageTitle={"Stadiums"} />
+        <TopNavbar pageTitle={"Arenas"} />
         {isLoading ? (
           <Loader />
         ) : isSuccess ? (
@@ -32,8 +32,8 @@ const Stadiums = () => {
               NBA Arenas
             </motion.h1>
             <div className="flex flex-col justify-center items-center gap-14 mt-14">
-              {allNBAStadiums.map((stadium, index) => {
-                return <StadiumCard stadiumInfo={stadium} key={index} />;
+              {allNBAArenas.map((arena, index) => {
+                return <ArenaCard ArenaInfo={arena} key={index} />;
               })}
             </div>
           </>
@@ -46,4 +46,4 @@ const Stadiums = () => {
   );
 };
 
-export default Stadiums;
+export default Arenas;
