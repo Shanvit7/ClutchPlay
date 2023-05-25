@@ -12,15 +12,6 @@ const baseQueryForBallsDontLie = (()=>{
     });
 })();
 
-const baseQueryForUnsplash = (()=>{
-    return axios.create({
-        baseURL:import.meta.env.VITE_NBA_2_STADIUM_API_URL,
-        headers:{
-            'Authorization':`Client-ID ${import.meta.env.VITE_NBA_2_STADIUM_API_ACCESS_KEY}`
-        }
-    })
-})
-
 export const handleRequestForSportsDataIo=async(options, store)=>{
     const onSuccess=(response)=>{
         const {data: message} = response;
@@ -45,17 +36,4 @@ export const handleRequestForBallDontLie=async(options, store)=>{
     }
 
     return baseQueryForBallsDontLie(options).then(onSuccess).catch(onError);
-}
-
-export const handleRequestForUnsplash=async(options, store)=>{
-    const onSuccess=(response)=>{
-        const {data: message} = response;
-        return message;
-    }
-
-    const onError = (error)=>{
-        return Promise.reject(error.response);
-    }
-
-    return baseQueryForUnsplash(options).then(onSuccess).catch(onError);
 }

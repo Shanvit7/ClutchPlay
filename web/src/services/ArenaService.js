@@ -1,11 +1,4 @@
-import { handleRequestForSportsDataIo, handleRequestForUnsplash } from "../utils/axiosConfig";
-
-export const getPhotoOfRequestedNBAArena=({stadium})=>{
-    return handleRequestForUnsplash({
-        url:`search/photos?query=nba ${stadium} stadium&per_page=1`,
-        method:'GET'
-    });
-};
+import { handleRequestForSportsDataIo } from "../utils/axiosConfig";
 
 export const getAllNBAArenas = ({})=>{
     return handleRequestForSportsDataIo({
