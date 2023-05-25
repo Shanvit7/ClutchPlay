@@ -11,16 +11,7 @@ const Players = () => {
     <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Players"} />
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.1, ease: "easeInOut" }}
-          className="mt-20 ml-8 text-3xl lg:text-5xl"
-        >
-          Know all about NBA Players
-        </motion.h1>
-
-        <div className="flex flex-col h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
+        <div className="flex flex-col h-2/3 mt-14 2xl:h-min 2xl:mt-32 2xl:flex-row xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

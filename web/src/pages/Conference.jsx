@@ -3,7 +3,6 @@ import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import { useParams } from "react-router-dom";
-import { motion } from "framer-motion";
 import BackButton from "../components/Common/BackButton";
 import DivisionsByConference from "../components/Divisions/DivisionsByConference";
 import Loader from "../components/Common/Loader";
@@ -17,20 +16,12 @@ const Conference = () => {
   return (
     <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar pageTitle={`Teams of ${conferenceId} Conference`} />
+        <TopNavbar pageTitle={`Divisions of ${conferenceId} Conference`} />
         <BackButton />
         {isLoading ? (
           <Loader />
         ) : isSuccess ? (
           <>
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1, ease: "easeInOut" }}
-              className="mt-20 ml-8 capitalize text-xl lg:text-5xl mt-32 ml-4"
-            >
-              {conferenceId} Conference Divisions
-            </motion.h1>
             <DivisionsByConference
               conferenceId={conferenceId}
               teamData={teamData}

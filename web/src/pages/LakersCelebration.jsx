@@ -20,7 +20,7 @@ const LakersCelebration = () => {
       <Parallax pages={10}>
         <SideBarWrapper>
           <ParallaxLayer>
-            <TopNavbar />
+            <TopNavbar pageTitle={'LA Lakers'}/>
             <div
               ref={ref}
               className="flex flex-col justify-center items-center h-full"

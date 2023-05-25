@@ -9,17 +9,8 @@ const Teams = () => {
   return (
     <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
-        <TopNavbar pageTitle={"Teams"} />
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.1, ease: "easeInOut" }}
-          className="mt-20 ml-8 text-3xl lg:text-5xl"
-        >
-          Conference
-        </motion.h1>
-
-        <div className="flex flex-col gap-14 h-2/3 mt-8 2xl:h-min 2xl:mt-32 2xl:flex-row xl:gap-0 xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
+        <TopNavbar pageTitle={"Conference"} />
+        <div className="flex flex-col gap-14 h-2/3 mt-14 2xl:h-min 2xl:mt-32 2xl:flex-row xl:gap-0 xl:h-min xl:flew-row xl:mt-32 lg:h-min lg:flex-row lg:mt-32 items-center justify-around w-full">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
