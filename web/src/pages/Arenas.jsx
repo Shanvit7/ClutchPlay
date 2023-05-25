@@ -4,7 +4,7 @@ import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import ArenaCard from "../components/Arenas/ArenaCard";
 import { useQuery } from "react-query";
-import { getAllNBAArenas } from "../services/ArenaService";
+import { getAllNBAArenas } from "../services/arenaService";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import { motion } from "framer-motion";
