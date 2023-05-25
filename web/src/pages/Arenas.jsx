@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
@@ -10,11 +10,23 @@ import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import { motion } from "framer-motion";
 
 const Arenas = () => {
-  const {
-    data: allNBAArenas = [],
-    isLoading,
-    isSuccess,
-  } = useQuery("allNBAArenas", getAllNBAArenas);
+  const { data: allNBAArenas = [], isLoading, isSuccess } = useQuery(
+    "allNBAArenas",
+    getAllNBAArenas
+  );
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(6);
+
+  // Calculate the index of the first and last items to display
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentArenas = allNBAArenas.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Change page
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
@@ -32,9 +44,26 @@ const Arenas = () => {
               NBA Arenas
             </motion.h1>
             <div className="flex flex-col justify-center items-center gap-14 mt-14">
-              {allNBAArenas.map((arena, index) => {
-                return <ArenaCard ArenaInfo={arena} key={index} />;
-              })}
+              {currentArenas.map((arena, index) => (
+                <ArenaCard ArenaInfo={arena} key={index} />
+              ))}
+            </div>
+            <div className="btn-group flex justify-center mt-14">
+              <button
+                className="btn"
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                «
+              </button>
+              <button className="btn">Page {currentPage}</button>
+              <button
+                className="btn"
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={indexOfLastItem >= allNBAArenas.length}
+              >
+                »
+              </button>
             </div>
           </>
         ) : (
