@@ -44,8 +44,7 @@ const UpcomingGame = ({ gameInfo }) => {
   }, []);
 
   return (
-    <div className="w-full flex justify-center mt-32">
-      <div className="card flex w-96 shadow-xl border">
+      <div className="card flex max-w-xs lg:max-w-md shadow-xl border">
         <div className="card-body items-center text-center">
           <h2 className="font-bold text-4xl">Upcoming Game</h2>
           <div className="flex gap-4 items-center w-full justify-center mt-4">
@@ -98,7 +97,6 @@ const UpcomingGame = ({ gameInfo }) => {
             </div>
         </div>
       </div>
-    </div>
   );
 };
 

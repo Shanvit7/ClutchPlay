@@ -13,6 +13,9 @@ import { checkForNextGame } from "../utils/gameInfo";
 import { LAL } from "react-nba-logos";
 import Loader from "../components/Common/Loader";
 import UpcomingGame from "../components/Games/UpcomingGame";
+import MeetThePlayerCard from "../components/Players/MeetThePlayersCard";
+import ArenaHomeCard from "../components/Arenas/ArenaHomeCard";
+import NewsTitleCard from "../components/Players/NewsTitleCard";
 const Home = () => {
   const navigate = useNavigate();
   const todaysDate = new Date();
@@ -93,18 +96,32 @@ const Home = () => {
             </div>
           </div>
         </motion.div>
-        {[todaysGameStatus, tommorrowsGameStatus].some(
-          (status) => status === "loading"
-        ) ? (
-          <Loader />
-        ) : [todaysGameStatus, tommorrowsGameStatus].some(
-            (status) => status === "error"
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-14 mt-24 items-center">
+          {[todaysGameStatus, tommorrowsGameStatus].some(
+            (status) => status === "loading"
           ) ? (
-          <SomethingWentWrong />
-        ) : (
-          upcomingGame.status && (
-            <UpcomingGame gameInfo={upcomingGame} />)
-        )}
+            <Loader />
+          ) : [todaysGameStatus, tommorrowsGameStatus].some(
+              (status) => status === "error"
+            ) ? (
+            <SomethingWentWrong />
+          ) : (
+            upcomingGame.status && (
+              <div className="flex justify-center">
+                <UpcomingGame gameInfo={upcomingGame} />
+              </div>
+            )
+          )}
+          <div className="flex justify-center">
+            <ArenaHomeCard />
+          </div>
+          <div className="flex justify-center">
+            <MeetThePlayerCard />
+          </div>
+          <div className="flex justify-center">
+            <NewsTitleCard />
+          </div>
+        </div>
         <Footer />
       </SideBarWrapper>
     </div>
