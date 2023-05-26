@@ -11,7 +11,7 @@ const NBALogo = () => {
 const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
   const HomeLogo = nbaTeams.get(gameInfo.home_team?.abbreviation) || NBALogo;
   const AwayLogo = nbaTeams.get(gameInfo.visitor_team?.abbreviation) || NBALogo;
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   return (
      <div className="stats bg-black w-full shadow mt-4">
       {
