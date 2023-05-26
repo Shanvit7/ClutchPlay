@@ -4,12 +4,14 @@ import nbaLogo from "/nba.svg";
 import { determineWinner } from "../../utils/gameInfo";
 import Loader from "../Common/Loader";
 import SomethingWentWrong from "../Error/SomethingWentWrong";
+import { useNavigate } from "react-router";
 const NBALogo = () => {
   return <img src={nbaLogo} className="w-20 h-20" alt='nba-logo'/>;
 };
 const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
   const HomeLogo = nbaTeams.get(gameInfo.home_team?.abbreviation) || NBALogo;
   const AwayLogo = nbaTeams.get(gameInfo.visitor_team?.abbreviation) || NBALogo;
+  const navigate= useNavigate();
   return (
      <div className="stats bg-black w-full shadow mt-4">
       {
@@ -56,8 +58,8 @@ const GameCard = ({ gameInfo = {},status,areNogamesScheduled }) => {
         <div className="stat-desc text-center font-bold">
           {gameInfo.status === "Final" && determineWinner(gameInfo)}
         </div>
-        <button className="place-self-center btn btn-sm bg-black hover:bg-white hover:text-black xl:w-2/4">
-          Comming Soon
+        <button onClick={()=>navigate('/comming-soon')} className="place-self-center btn btn-sm bg-black hover:bg-white hover:text-black xl:w-2/4">
+          See Stats
         </button>
       </div>
       <div className="stat pl-0 pr-0 xl:pl-6 xl:pr-6">

@@ -27,7 +27,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, ease: "backIn" }}
         >
-          Games, Players and much more.
+          Explore Players, Arenas, Game Scores, and Teams to Dive into the World of Basketball
         </motion.h3>
 
         <motion.div

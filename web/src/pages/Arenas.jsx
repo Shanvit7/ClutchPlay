@@ -69,7 +69,7 @@ const Arenas = () => {
           <>
             <div className="flex flex-col justify-center items-center gap-14 mt-14">
               {currentArenas.map((arena, index) => (
-                <ArenaCard ArenaInfo={arena} key={index} />
+                <ArenaCard arenaInfo={arena} key={index} />
               ))}
             </div>
             <div className="btn-group flex justify-center mt-14">

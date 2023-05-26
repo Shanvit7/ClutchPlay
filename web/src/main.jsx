@@ -52,6 +52,10 @@ const router = createBrowserRouter([
     element: <CommingSoon />,
   },
   {
+    path:'/comming-soon',
+    element: <CommingSoon />,
+  },
+  {
     path: "/lakers-75",
     element: <LakersCelebration />,
   },

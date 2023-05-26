@@ -1,5 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router";
 const PlayerCard = ({ playerInfo = {} }) => {
+  const navigate= useNavigate();
   return (
     <div className="card card-compact w-80 lg:w-96 border-4 shadow-xl">
       <div className={`badge badge-success gap-2`}>{playerInfo.Status}</div>
@@ -18,8 +20,8 @@ const PlayerCard = ({ playerInfo = {} }) => {
 
           <p>Team: {playerInfo.Team}</p>
         </div>
-        <button className="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-md text-center">
-          Comming Soon
+        <button onClick={()=>navigate('/comming-soon')} className="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-md text-center">
+          Know More
         </button>
       </div>
     </div>
