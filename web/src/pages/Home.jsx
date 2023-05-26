@@ -106,11 +106,9 @@ const Home = () => {
             ) ? (
             <SomethingWentWrong />
           ) : (
-            upcomingGame.status && (
-              <div className="flex justify-center">
-                <UpcomingGame gameInfo={upcomingGame} />
-              </div>
-            )
+            <div className="flex justify-center">
+              <UpcomingGame gameInfo={upcomingGame} />
+            </div>
           )}
           <div className="flex justify-center">
             <ArenaHomeCard />
