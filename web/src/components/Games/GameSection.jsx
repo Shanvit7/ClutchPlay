@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+/*  COMPONENTS  */
 import GameCard from "./GameCard";
+/*  UTILS  */
 import { motion } from "framer-motion";
 
 const GameSection = ({ title, games = [], status }) => {

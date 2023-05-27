@@ -1,8 +1,10 @@
 import React from "react";
-import { ParallaxLayer } from "@react-spring/parallax";
-import Footer from "../Common/Footer";
+/*  UTILS  */
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+/*  COMPONENTS  */
+import { ParallaxLayer } from "@react-spring/parallax";
+import Footer from "../Common/Footer";
 const ShowEra = ({ timeEra }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,

@@ -1,4 +1,5 @@
 import React from "react";
+/*  UTILS  */
 import { teamLogos } from "../../utils/teamInfo";
 
 const SomethingWentWrong = () => {

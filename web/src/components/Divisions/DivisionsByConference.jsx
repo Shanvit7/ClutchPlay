@@ -1,5 +1,7 @@
 import React from "react";
+/*  UTILS  */
 import { allWesternDivisions, allEasternDivisions } from "../../utils/teamInfo";
+/*  COMPONENTS  */
 import DivisionTable from "./DivisonTable";
 
 const DivisionsByConference = ({ conferenceId, teamData }) => {

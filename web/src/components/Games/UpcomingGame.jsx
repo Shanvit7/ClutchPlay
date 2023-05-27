@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+/*  UTILS  */
 import { nbaTeams } from "../../utils/teamInfo";
-import nbaLogo from "/nba.svg";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+/*  IMAGES  */
+import nbaLogo from "/nba.svg";
+
 const NBALogo = () => {
   return <img src={nbaLogo} className="w-20 h-20" alt="nba-logo" />;
 };

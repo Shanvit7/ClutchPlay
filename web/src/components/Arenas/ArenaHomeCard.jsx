@@ -1,6 +1,8 @@
 import React from "react";
+/*  UTILS  */
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
+
 const ArenaHomeCard = () => {
   const navigate = useNavigate();
   return (

@@ -1,10 +1,13 @@
 import React, { Fragment } from "react";
+/*  UTILS  */
 import { nbaTeams } from "../../utils/teamInfo";
-import nbaLogo from "/nba.svg";
 import { determineWinner } from "../../utils/gameInfo";
+import { useNavigate } from "react-router";
+/*  COMPONENTS  */
 import Loader from "../Common/Loader";
 import SomethingWentWrong from "../Error/SomethingWentWrong";
-import { useNavigate } from "react-router";
+/*  IMAGES  */
+import nbaLogo from "/nba.svg";
 const NBALogo = () => {
   return <img src={nbaLogo} className="w-20 h-20" alt='nba-logo'/>;
 };

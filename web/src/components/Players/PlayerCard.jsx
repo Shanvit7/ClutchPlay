@@ -1,5 +1,7 @@
 import React from "react";
+/*  UTILS */
 import { useNavigate } from "react-router";
+
 const PlayerCard = ({ playerInfo = {} }) => {
   const navigate= useNavigate();
   return (

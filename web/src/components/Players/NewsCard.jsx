@@ -1,4 +1,5 @@
 import React from "react";
+
 const NewsCard = ({ newsItem }) => {
   const visitOriginalSourceUrl = () => {
     window.location.href = newsItem.OriginalSourceUrl;

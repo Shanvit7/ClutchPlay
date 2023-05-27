@@ -1,5 +1,7 @@
 import React from "react";
+/*  UTILS  */
 import { motion } from "framer-motion";
+/*  COMPONENTS  */
 import DivisionRows from "./DivisonRows";
 
 const DivisionTable = ({ divisionName, teamData }) => {

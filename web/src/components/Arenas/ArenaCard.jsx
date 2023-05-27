@@ -1,4 +1,5 @@
 import React from "react";
+/*  UTILS  */
 import { useNavigate } from "react-router";
 
 const ArenaCard = ({ arenaInfo={} }) => {

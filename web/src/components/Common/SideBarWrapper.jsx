@@ -1,5 +1,7 @@
 import React from "react";
+/*  UTILS  */
 import { useNavigate } from "react-router-dom";
+
 const SideBarWrapper = ({ children }) => {
   const navigate = useNavigate();
   return (

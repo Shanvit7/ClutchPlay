@@ -1,11 +1,15 @@
 import React from "react";
+/*  UTILS  */
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
+import { formattedDate } from "../../utils/date";
+/*  SERVICES */
 import { getPlayerInHeadline } from "../../services/playerService";
 import { useQuery } from "react-query";
-import { formattedDate } from "../../utils/date";
-import { motion } from "framer-motion";
+/* COMPONENTS  */
 import Loader from "../Common/Loader";
 import SomethingWentWrong from "../Error/SomethingWentWrong";
+
 const NewsTitleCard = () => {
   const navigate = useNavigate();
   const {

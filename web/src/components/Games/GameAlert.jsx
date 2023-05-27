@@ -1,8 +1,12 @@
 import React, { Fragment } from "react";
+/*  IMAGES  */
 import nbaLogo from "/nba.svg";
-import { areGamesinProgress } from "../../services/gameService";
-import { useNavigate } from "react-router";
+/*  SERVICES  */
 import { useQuery } from "react-query";
+import { areGamesinProgress } from "../../services/gameService";
+/*  UTILS  */
+import { useNavigate } from "react-router";
+
 const GameAlert = () => {
   const {data: areGamesinProgressStatus} = useQuery('areGamesInProgress',areGamesinProgress);
   const navigate= useNavigate();
