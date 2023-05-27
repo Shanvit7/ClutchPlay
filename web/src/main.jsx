@@ -1,21 +1,75 @@
-import React from "react";
+import React, { Suspense,lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { QueryClientProvider,QueryClient } from 'react-query'
+import { QueryClientProvider, QueryClient } from 'react-query'
 import "./index.css";
 
 // Pages routes
-import Landing from "./pages/Landing";
-import Home from "./pages/Home";
-import CommingSoon from "./pages/CommingSoon";
-import Players from "./pages/Players";
-import PlayerInHeadline from "./pages/PlayerInHeadline";
-import MeetThePlayers from "./pages/MeetThePlayers";
-import Teams from "./pages/Teams";
-import Conference from "./pages/Conference";
-import Games from './pages/Games';
-import LakersCelebration from "./pages/LakersCelebration";
-import Arenas from "./pages/Arenas";
+const Landing = React.lazy(() => import("./pages/Landing"));
+
+const Home = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/Home")), 1050);
+  });
+});
+
+const CommingSoon = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/CommingSoon")), 1050);
+  });
+});
+
+const Players = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/Players")), 1000);
+  });
+});
+
+const PlayerInHeadline = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/PlayerInHeadline")), 1000);
+  });
+});
+
+const MeetThePlayers = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/MeetThePlayers")), 1000);
+  });
+});
+
+const Teams = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/Teams")), 1000);
+  });
+});
+
+const Conference = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/Conference")), 1000);
+  });
+});
+
+const Games = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/Games")), 1000);
+  });
+});
+
+const LakersCelebration = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/LakersCelebration")), 800);
+  });
+});
+
+const Arenas = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/Arenas")), 1000);
+  });
+});
+
+
+// Page Loader
+import PageLoader from "./components/Common/PageLoader";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -52,7 +106,7 @@ const router = createBrowserRouter([
     element: <CommingSoon />,
   },
   {
-    path:'/comming-soon',
+    path: '/comming-soon',
     element: <CommingSoon />,
   },
   {
@@ -72,7 +126,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <Suspense fallback={<PageLoader />}>
+        <RouterProvider router={router} />
+      </Suspense>
     </React.StrictMode>
-    </QueryClientProvider>
+  </QueryClientProvider>
 );
