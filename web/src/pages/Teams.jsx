@@ -1,9 +1,12 @@
 import React from "react";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
+/*  UTILS */
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+
 const Teams = () => {
   const navigate = useNavigate();
   return (

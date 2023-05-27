@@ -1,22 +1,27 @@
 import React, { lazy } from "react";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
-import nbaLogo from "/nba.svg";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { useQuery } from "react-query";
-import { formattedDate } from "../utils/date";
-import { getGamesByDate } from "../services/gameService";
-import { checkForNextGame } from "../utils/gameInfo";
-import { LAL } from "react-nba-logos";
-import { useInView } from "react-intersection-observer";
 import Loader from "../components/Common/Loader";
 const UpcomingGame = lazy(()=>import("../components/Games/UpcomingGame"));
 const MeetThePlayerCard = lazy(()=>import("../components/Players/MeetThePlayersCard"));
 const ArenaHomeCard = lazy(()=>import( "../components/Arenas/ArenaHomeCard"));
 const NewsTitleCard = lazy(()=>import("../components/Players/NewsTitleCard"));
+/*  UTILS */
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { checkForNextGame } from "../utils/gameInfo";
+import { formattedDate } from "../utils/date";
+import { useInView } from "react-intersection-observer";
+/*  SERVICES */
+import { useQuery } from "react-query";
+import { getGamesByDate } from "../services/gameService";
+/*  IMAGES */
+import nbaLogo from "/nba.svg";
+import { LAL } from "react-nba-logos";
+
 const Home = () => {
   const [gameref, inViewGame] = useInView({
     triggerOnce: true,

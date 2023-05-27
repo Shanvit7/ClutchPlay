@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
@@ -6,9 +7,12 @@ import PlayerCard from "../components/Players/PlayerCard";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import BackButton from "../components/Common/BackButton";
+/* SERVICES */
 import { useQuery } from "react-query";
 import { getAllPlayers } from "../services/playerService";
+/* UTILS */
 import { motion } from "framer-motion";
+
 const MeetThePlayers = () => {
   const {
     data: players = [],

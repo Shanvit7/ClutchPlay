@@ -1,15 +1,18 @@
 import React from "react";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import NewsCard from "../components/Players/NewsCard";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
-import { motion } from "framer-motion";
 import BackButton from "../components/Common/BackButton";
+/*  UTILS */
+import { motion } from "framer-motion";
+import { formattedDate } from "../utils/date";
+/*  SERVICES */
 import { getPlayerInHeadline } from "../services/playerService";
 import { useQuery } from "react-query";
-import { formattedDate } from "../utils/date";
 const PlayerInHeadline = () => {
   const {
     data: news = [],

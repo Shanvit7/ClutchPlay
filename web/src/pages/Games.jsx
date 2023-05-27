@@ -1,10 +1,13 @@
 import React from "react";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import GameAlert from "../components/Games/GameAlert";
-import { formattedDate } from "../utils/date";
 import GameSection from "../components/Games/GameSection";
+/*  UTILS */
+import { formattedDate } from "../utils/date";
+/*  SERVICES */
 import { useQuery } from "react-query";
 import { getGamesByDate } from "../services/gameService";
 

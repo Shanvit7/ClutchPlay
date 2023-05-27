@@ -1,8 +1,10 @@
 import React from "react";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import BackButton from "../components/Common/BackButton";
+
 const CommingSoon = () => {
   return (
     <div className="w-screen h-screen bg-black overflow-x-hidden">

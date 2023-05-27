@@ -1,11 +1,14 @@
 import React from "react";
+/* UTILS */
+import { lakersTimeLine } from "../utils/lakersTimeline";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ShowEra from "../components/Lakers@75/ShowEra";
-import { lakersTimeLine } from "../utils/lakersTimeline";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+/*  IMAGES */
 import { LAL } from "react-nba-logos";
 
 const LakersCelebration = () => {

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+/*  COMPONENTS */
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import ArenaCard from "../components/Arenas/ArenaCard";
-import { useQuery } from "react-query";
-import { getAllNBAArenas } from "../services/arenaService";
-import { motion } from "framer-motion";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
+/*  SERVICES */
+import { useQuery } from "react-query";
+import { getAllNBAArenas } from "../services/arenaService";
+/*  UTILS */
+import { motion } from "framer-motion";
 
 const Arenas = () => {
   const {
