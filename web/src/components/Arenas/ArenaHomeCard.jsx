@@ -5,7 +5,7 @@ const ArenaHomeCard = () => {
   return (
     <div className="card max-w-xs lg:max-w-md glass">
       <figure>
-        <img src="/players/players-in-headline.jpg" alt="car!" />
+        <img src="/arenas/arena.jpg" alt="arena" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">Arenas</h2>
