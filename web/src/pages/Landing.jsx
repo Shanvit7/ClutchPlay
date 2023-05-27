@@ -12,10 +12,10 @@ const Landing = () => {
   });
   const [bounceTheBall, setBounceTheBall] = useState(false);
   const navigate = useNavigate();
-  const goToHomePage=()=>{
-    navigate('/home');
+  const goToHomePage = () => {
+    navigate("/home");
   };
-  const dribbleTheBall=()=>{
+  const dribbleTheBall = () => {
     setBounceTheBall(true);
   };
   return (

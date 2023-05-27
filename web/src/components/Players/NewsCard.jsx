@@ -34,7 +34,10 @@ const NewsCard = ({ newsItem }) => {
                 </button>
               )}
               {newsItem.Source && (
-                <button className="btn btn-primary hover:bg-white hover:text-black" onClick={visitSource}>
+                <button
+                  className="btn btn-primary hover:bg-white hover:text-black"
+                  onClick={visitSource}
+                >
                   Visit {newsItem.Source}
                 </button>
               )}

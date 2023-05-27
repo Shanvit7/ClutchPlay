@@ -3,11 +3,13 @@ import React from "react";
 import reactJS from "/footer/reactjs.svg";
 import viteJS from "/footer/vitejs.svg";
 import tailwindCSS from "/footer/tailwindcss.svg";
-import reactQuery from '/footer/reactQuery.svg';
+import reactQuery from "/footer/reactQuery.svg";
 
-const Footer = ({noSpace}) => {
+const Footer = () => {
   return (
-    <footer className={`footer border-t-2 footer-center p-10 bg-black text-primary-content relative bottom-0 ${!noSpace && 'mt-40'}`}>
+    <footer
+      className={`footer border-t-2 footer-center p-10 bg-black text-primary-content relative bottom-0 mt-40`}
+    >
       <div className="cursor-pointer">
         <a
           href="https://github.com/Shanvit7/ClutchPlay"
@@ -29,10 +31,10 @@ const Footer = ({noSpace}) => {
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
-          <img src={reactJS} className="w-10 h-10" alt="react-js"/>
-          <img src={viteJS} className="w-10 h-10" alt='vite-js'/>
-          <img src={tailwindCSS} className="w-10 h-10" alt='tailwind-css'/>
-          <img src={reactQuery} className="w-10 h-10" alt="react-query"/>
+          <img src={reactJS} className="w-10 h-10" alt="react-js" />
+          <img src={viteJS} className="w-10 h-10" alt="vite-js" />
+          <img src={tailwindCSS} className="w-10 h-10" alt="tailwind-css" />
+          <img src={reactQuery} className="w-10 h-10" alt="react-query" />
         </div>
       </div>
     </footer>

@@ -28,7 +28,14 @@ const PageLoader = () => {
 
   return (
     <div className="flex bg-black h-screen w-screen overflow-hidden items-center justify-center">
-      <div className="radial-progress border-4" style={{ "--value": `${loadingTime}%`, "--size": "12rem", "--thickness": "2px"  }}>
+      <div
+        className="radial-progress border-4"
+        style={{
+          "--value": `${loadingTime}%`,
+          "--size": "12rem",
+          "--thickness": "2px",
+        }}
+      >
         {loadingTime}%
       </div>
     </div>
@@ -36,4 +43,3 @@ const PageLoader = () => {
 };
 
 export default PageLoader;
-

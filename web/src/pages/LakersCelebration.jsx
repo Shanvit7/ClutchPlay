@@ -23,7 +23,7 @@ const LakersCelebration = () => {
       <Parallax pages={10}>
         <SideBarWrapper>
           <ParallaxLayer>
-            <TopNavbar pageTitle={'LA Lakers'}/>
+            <TopNavbar pageTitle={"LA Lakers"} />
             <div
               ref={ref}
               className="flex flex-col justify-center items-center h-full"
@@ -60,20 +60,19 @@ const LakersCelebration = () => {
         </SideBarWrapper>
         <ParallaxLayer offset={1} speed={1} factor={2}>
           <div ref={KBref} className="h-full">
-            {
-              inViewKB && 
+            {inViewKB && (
               <motion.div
-              className="h-full flex justify-center parallax-content"
-              style={{ backgroundImage: `url('/lakers/kbryant.jpg')` }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration:0.5 }}
-            >
-              <h1 className="text-center mt-64">
-                Let's take a trip down the memory lane
-              </h1>
-            </motion.div>
-            }
+                className="h-full flex justify-center parallax-content"
+                style={{ backgroundImage: `url('/lakers/kbryant.jpg')` }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
+                <h1 className="text-center mt-64">
+                  Let's take a trip down the memory lane
+                </h1>
+              </motion.div>
+            )}
           </div>
         </ParallaxLayer>
         {lakersTimeLine.map((timeEra, index) => (

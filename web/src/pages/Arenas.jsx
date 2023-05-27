@@ -49,7 +49,10 @@ const Arenas = () => {
               type="text"
               className="w-full py-2 pr-10 pl-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Search arenas"
-              onChange={(e) => {setSearchTerm(e.target.value);setCurrentPage(1)}}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setCurrentPage(1);
+              }}
             />
             <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
               <svg

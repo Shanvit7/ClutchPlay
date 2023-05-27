@@ -15,7 +15,11 @@ import { getAllTeams } from "../services/teamService";
 
 const Conference = () => {
   const { conferenceId } = useParams();
-  const { data: teamData = [], isLoading, isSuccess } = useQuery('teams',getAllTeams);
+  const {
+    data: teamData = [],
+    isLoading,
+    isSuccess,
+  } = useQuery("teams", getAllTeams);
   return (
     <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>

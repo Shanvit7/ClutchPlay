@@ -52,7 +52,7 @@ const UpcomingGame = ({ gameInfo }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.3, ease: "anticipate",duration: 1 }}
+      transition={{ delay: 0.3, ease: "anticipate", duration: 1 }}
       className="card flex max-w-xs lg:max-w-md shadow-xl border"
     >
       <div className="card-body items-center text-center">

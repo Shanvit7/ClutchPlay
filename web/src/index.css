@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -73,8 +73,8 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar {
- background:#ccccff;
- width: 0.6rem;
+  background: #ccccff;
+  width: 0.6rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -85,15 +85,15 @@ button:focus-visible {
   background: #804b06;
 }
 
-.parallax-content{
+.parallax-content {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   ::-webkit-scrollbar {
-   width: 0.2rem;
-   }
+    width: 0.2rem;
+  }
 }

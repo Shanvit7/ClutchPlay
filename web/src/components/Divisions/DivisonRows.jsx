@@ -14,9 +14,7 @@ const DivisionRows = ({ team = {} }) => {
             </div>
           </div>
           <div>
-            <div
-              className="font-bold text-xs lg:text-2xl"
-            >
+            <div className="font-bold text-xs lg:text-2xl">
               {team.City} {team.Name}
             </div>
           </div>

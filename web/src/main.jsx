@@ -1,7 +1,7 @@
-import React, { Suspense,lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { QueryClientProvider, QueryClient } from 'react-query'
+import { QueryClientProvider, QueryClient } from "react-query";
 import "./index.css";
 
 // Pages routes
@@ -67,7 +67,6 @@ const Arenas = React.lazy(() => {
   });
 });
 
-
 // Page Loader
 import PageLoader from "./components/Common/PageLoader";
 import NotFound from "./pages/NotFound";
@@ -107,7 +106,7 @@ const router = createBrowserRouter([
     element: <CommingSoon />,
   },
   {
-    path: '/comming-soon',
+    path: "/comming-soon",
     element: <CommingSoon />,
   },
   {
@@ -123,9 +122,9 @@ const router = createBrowserRouter([
     element: <MeetThePlayers />,
   },
   {
-    path:'*',
+    path: "*",
     element: <NotFound />,
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

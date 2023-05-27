@@ -5,10 +5,12 @@ import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import Loader from "../components/Common/Loader";
-const UpcomingGame = lazy(()=>import("../components/Games/UpcomingGame"));
-const MeetThePlayerCard = lazy(()=>import("../components/Players/MeetThePlayersCard"));
-const ArenaHomeCard = lazy(()=>import( "../components/Arenas/ArenaHomeCard"));
-const NewsTitleCard = lazy(()=>import("../components/Players/NewsTitleCard"));
+const UpcomingGame = lazy(() => import("../components/Games/UpcomingGame"));
+const MeetThePlayerCard = lazy(() =>
+  import("../components/Players/MeetThePlayersCard")
+);
+const ArenaHomeCard = lazy(() => import("../components/Arenas/ArenaHomeCard"));
+const NewsTitleCard = lazy(() => import("../components/Players/NewsTitleCard"));
 /*  UTILS */
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -25,19 +27,19 @@ import { LAL } from "react-nba-logos";
 const Home = () => {
   const [gameref, inViewGame] = useInView({
     triggerOnce: true,
-    threshold:0.1
+    threshold: 0.1,
   });
   const [arenaRef, inViewArena] = useInView({
     triggerOnce: true,
-    threshold:0.1
+    threshold: 0.1,
   });
   const [playerRef, inViewPlayer] = useInView({
     triggerOnce: true,
-    threshold:0.1
+    threshold: 0.1,
   });
   const [newsRef, inViewNews] = useInView({
     triggerOnce: true,
-    threshold:0.1
+    threshold: 0.1,
   });
   const navigate = useNavigate();
   const todaysDate = new Date();
@@ -129,29 +131,17 @@ const Home = () => {
             <SomethingWentWrong />
           ) : (
             <div ref={gameref} className="flex justify-center">
-              {
-                inViewGame && 
-                <UpcomingGame gameInfo={upcomingGame} />
-              }
+              {inViewGame && <UpcomingGame gameInfo={upcomingGame} />}
             </div>
           )}
           <div ref={arenaRef} className="flex justify-center">
-            {
-              inViewArena && 
-              <ArenaHomeCard />
-            }
+            {inViewArena && <ArenaHomeCard />}
           </div>
           <div ref={playerRef} className="flex justify-center">
-            {
-              inViewPlayer && 
-              <MeetThePlayerCard />
-            }
+            {inViewPlayer && <MeetThePlayerCard />}
           </div>
           <div ref={newsRef} className="flex justify-center">
-            {
-              inViewNews && 
-              <NewsTitleCard />
-            }
+            {inViewNews && <NewsTitleCard />}
           </div>
         </div>
         <Footer />

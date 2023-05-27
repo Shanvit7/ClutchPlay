@@ -77,9 +77,9 @@ const ShowEra = ({ timeEra }) => {
               >
                 {inViewQuote && (
                   <motion.section
-                  initial={{opacity: 0}}
-                  animate={{opacity: 1}}
-                  transition={{ delay: 0.2, duration: 2 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 2 }}
                   >
                     <p className="mb-2">
                       I'm here. I'm not going anywhere. No matter what the
