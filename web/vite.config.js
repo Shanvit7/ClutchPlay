@@ -12,9 +12,9 @@ export default defineConfig({
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
         name: "Clutch Play",
-        short_name: "CP",
-        description: "NBA scores, games, stats & more",
-        theme_color: "#ffffff",
+        short_name: "ClutchPlay",
+        description: "Explore Players, Arenas, Game Scores, and Teams to Dive into the World of Basketball",
+        theme_color: "#000000",
         start_url: "/",
         icons: [
           {

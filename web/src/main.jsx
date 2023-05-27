@@ -25,6 +25,12 @@ const Players = React.lazy(() => {
   });
 });
 
+const AboutUs = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./pages/AboutUs")), 1000);
+  });
+});
+
 const PlayerInHeadline = React.lazy(() => {
   return new Promise((resolve) => {
     setTimeout(() => resolve(import("./pages/PlayerInHeadline")), 1000);
@@ -103,7 +109,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/about-us",
-    element: <CommingSoon />,
+    element: <AboutUs />,
   },
   {
     path: "/comming-soon",

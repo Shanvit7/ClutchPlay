@@ -84,7 +84,7 @@ const MeetThePlayers = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, ease: "anticipate" }}
-                className="inline-grid gap-14 xl:gap-24 lg:gap-20 grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3"
+                className="inline-grid gap-14 xl:gap-24 lg:gap-20 grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2"
               >
                 {currentPlayers.map((player, key) => (
                   <PlayerCard playerInfo={player} key={key} />
