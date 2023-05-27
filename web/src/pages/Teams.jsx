@@ -14,7 +14,7 @@ const Teams = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, ease: "easeInOut" }}
+            transition={{ delay: 0.3, ease: "anticipate", duration: 1 }}
             className="card w-80 lg:w-96 shadow-xl image-full before:custom-card"
           >
             <figure>
@@ -35,7 +35,7 @@ const Teams = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, ease: "easeInOut" }}
+            transition={{ delay: 0.3, ease: "anticipate", duration: 1 }}
             className="card w-80 lg:w-96 shadow-xl image-full before:custom-card"
           >
             <figure>

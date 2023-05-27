@@ -5,6 +5,7 @@ import Footer from "../components/Common/Footer";
 import NewsCard from "../components/Players/NewsCard";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
+import { motion } from "framer-motion";
 import BackButton from "../components/Common/BackButton";
 import { getPlayerInHeadline } from "../services/playerService";
 import { useQuery } from "react-query";
@@ -14,7 +15,7 @@ const PlayerInHeadline = () => {
     data: news = [],
     isLoading,
     isSuccess,
-  } = useQuery('playersInNews',()=>getPlayerInHeadline(formattedDate()));
+  } = useQuery("playersInNews", () => getPlayerInHeadline(formattedDate()));
   return (
     <div className="w-screen h-screen bg-black overflow-x-hidden">
       <SideBarWrapper>
@@ -31,7 +32,15 @@ const PlayerInHeadline = () => {
               </div>
             </div>
           ) : (
-            news.map((item, key) => <NewsCard newsItem={item} key={key} />)
+            news.map((item, key) => (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, ease: "anticipate" }}
+              >
+                <NewsCard newsItem={item} key={key} />
+              </motion.div>
+            ))
           )
         ) : (
           <SomethingWentWrong />

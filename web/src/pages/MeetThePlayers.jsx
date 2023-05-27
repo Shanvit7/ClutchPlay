@@ -8,12 +8,13 @@ import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 import BackButton from "../components/Common/BackButton";
 import { useQuery } from "react-query";
 import { getAllPlayers } from "../services/playerService";
-
+import { motion } from "framer-motion";
 const MeetThePlayers = () => {
-  const { data: players = [], isLoading, isSuccess } = useQuery(
-    "players",
-    getAllPlayers
-  );
+  const {
+    data: players = [],
+    isLoading,
+    isSuccess,
+  } = useQuery("players", getAllPlayers);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(9);
   const [searchTerm, setSearchTerm] = useState("");
@@ -72,11 +73,16 @@ const MeetThePlayers = () => {
         ) : isSuccess ? (
           <>
             <div className="flex justify-center mt-14">
-              <div className="inline-grid gap-14 xl:gap-24 lg:gap-20 grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, ease: "anticipate" }}
+                className="inline-grid gap-14 xl:gap-24 lg:gap-20 grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3"
+              >
                 {currentPlayers.map((player, key) => (
                   <PlayerCard playerInfo={player} key={key} />
                 ))}
-              </div>
+              </motion.div>
             </div>
             <div className="btn-group flex justify-center mt-14">
               <button
@@ -106,4 +112,3 @@ const MeetThePlayers = () => {
 };
 
 export default MeetThePlayers;
-
