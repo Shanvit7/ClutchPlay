@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import SideBarWrapper from "../components/Common/SideBarWrapper";
 import TopNavbar from "../components/Common/TopNavbar";
 import Footer from "../components/Common/Footer";
@@ -11,12 +11,29 @@ import { formattedDate } from "../utils/date";
 import { getGamesByDate } from "../services/gameService";
 import { checkForNextGame } from "../utils/gameInfo";
 import { LAL } from "react-nba-logos";
+import { useInView } from "react-intersection-observer";
 import Loader from "../components/Common/Loader";
-import UpcomingGame from "../components/Games/UpcomingGame";
-import MeetThePlayerCard from "../components/Players/MeetThePlayersCard";
-import ArenaHomeCard from "../components/Arenas/ArenaHomeCard";
-import NewsTitleCard from "../components/Players/NewsTitleCard";
+const UpcomingGame = lazy(()=>import("../components/Games/UpcomingGame"));
+const MeetThePlayerCard = lazy(()=>import("../components/Players/MeetThePlayersCard"));
+const ArenaHomeCard = lazy(()=>import( "../components/Arenas/ArenaHomeCard"));
+const NewsTitleCard = lazy(()=>import("../components/Players/NewsTitleCard"));
 const Home = () => {
+  const [gameref, inViewGame] = useInView({
+    triggerOnce: true,
+    threshold:0.1
+  });
+  const [arenaRef, inViewArena] = useInView({
+    triggerOnce: true,
+    threshold:0.1
+  });
+  const [playerRef, inViewPlayer] = useInView({
+    triggerOnce: true,
+    threshold:0.1
+  });
+  const [newsRef, inViewNews] = useInView({
+    triggerOnce: true,
+    threshold:0.1
+  });
   const navigate = useNavigate();
   const todaysDate = new Date();
   const tommorrowsDate = new Date(todaysDate.getTime() + 24 * 60 * 60 * 1000);
@@ -34,27 +51,27 @@ const Home = () => {
   );
   const upcomingGame = checkForNextGame(todaysGame, tommorrowsGame);
   return (
-    <div className="w-screen h-screen bg-black overflow-x-hidden">
+    <div className="w-screen h-screen bg-black overflow-x-hidden scroll-smooth">
       <SideBarWrapper>
         <TopNavbar pageTitle={"Home"} />
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1.1 }}
           transition={{ delay: 0.3, ease: "anticipate" }}
-          className="text-2xl text-center lg:text-4xl mt-14"
+          className="text-xl text-center lg:text-4xl mt-14"
         >
           Catch all the NBA action here.
         </motion.h2>
 
-        <motion.h3
-          className="text-center mt-8"
+        <motion.p
+          className="text-center mt-8 text-xxs lg:text-xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, ease: "backIn" }}
         >
           Explore Players, Arenas, Game Scores, and Teams to Dive into the World
           of Basketball
-        </motion.h3>
+        </motion.p>
 
         <motion.div
           className="flex justify-center mt-14 mb-14"
@@ -106,18 +123,30 @@ const Home = () => {
             ) ? (
             <SomethingWentWrong />
           ) : (
-            <div className="flex justify-center">
-              <UpcomingGame gameInfo={upcomingGame} />
+            <div ref={gameref} className="flex justify-center">
+              {
+                inViewGame && 
+                <UpcomingGame gameInfo={upcomingGame} />
+              }
             </div>
           )}
-          <div className="flex justify-center">
-            <ArenaHomeCard />
+          <div ref={arenaRef} className="flex justify-center">
+            {
+              inViewArena && 
+              <ArenaHomeCard />
+            }
           </div>
-          <div className="flex justify-center">
-            <MeetThePlayerCard />
+          <div ref={playerRef} className="flex justify-center">
+            {
+              inViewPlayer && 
+              <MeetThePlayerCard />
+            }
           </div>
-          <div className="flex justify-center">
-            <NewsTitleCard />
+          <div ref={newsRef} className="flex justify-center">
+            {
+              inViewNews && 
+              <NewsTitleCard />
+            }
           </div>
         </div>
         <Footer />

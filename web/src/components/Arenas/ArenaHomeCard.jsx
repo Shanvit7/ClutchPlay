@@ -1,9 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
 const ArenaHomeCard = () => {
   const navigate = useNavigate();
   return (
-    <div className="card max-w-xs lg:max-w-md glass">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, ease: "anticipate", duration: 1 }}
+      className="card max-w-xs lg:max-w-md glass"
+    >
       <figure>
         <img src="/arenas/arena.jpg" alt="arena" />
       </figure>
@@ -22,7 +28,7 @@ const ArenaHomeCard = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

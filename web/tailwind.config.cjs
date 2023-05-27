@@ -8,7 +8,10 @@ module.exports = {
     extend: {
       fontSize:{
         xxs:'0.5rem',
-      }
+      },
+      scrollBehavior: {
+        smooth: "smooth",
+      },
     },
   },
   daisyui: {

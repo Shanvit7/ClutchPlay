@@ -1,9 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 const MeetThePlayerCard = () => {
   const navigate = useNavigate();
   return (
-    <div className="card max-w-xs lg:max-w-md shadow-xl image-full before:custom-card">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, ease: "anticipate", duration: 1 }}
+      className="card max-w-xs lg:max-w-md shadow-xl image-full before:custom-card"
+    >
       <figure>
         <img src="/players/meet-the-players.jpg" alt="meet-the-players" />
       </figure>
@@ -17,7 +23,7 @@ const MeetThePlayerCard = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
