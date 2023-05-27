@@ -5,6 +5,7 @@ import Footer from "../components/Common/Footer";
 import ArenaCard from "../components/Arenas/ArenaCard";
 import { useQuery } from "react-query";
 import { getAllNBAArenas } from "../services/arenaService";
+import { motion } from "framer-motion";
 import Loader from "../components/Common/Loader";
 import SomethingWentWrong from "../components/Error/SomethingWentWrong";
 
@@ -67,11 +68,16 @@ const Arenas = () => {
           <Loader />
         ) : isSuccess ? (
           <>
-            <div className="flex flex-col justify-center items-center gap-14 mt-14">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, ease: "anticipate" }}
+              className="flex flex-col justify-center items-center gap-14 mt-14"
+            >
               {currentArenas.map((arena, index) => (
                 <ArenaCard arenaInfo={arena} key={index} />
               ))}
-            </div>
+            </motion.div>
             <div className="btn-group flex justify-center mt-14">
               <button
                 className="btn"
