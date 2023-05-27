@@ -70,6 +70,7 @@ const Arenas = React.lazy(() => {
 
 // Page Loader
 import PageLoader from "./components/Common/PageLoader";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -121,6 +122,10 @@ const router = createBrowserRouter([
     path: "/meet-the-players",
     element: <MeetThePlayers />,
   },
+  {
+    path:'*',
+    element: <NotFound />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
