@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 const BackButton = () => {
   const navigate = useNavigate();
   return (
-    <div className="ml-4 mt-2">
+    <div className="lg:ml-4 mt-2">
       <button
         className="bg-black hover:border-white"
         onClick={() => navigate(-1)}
       >
         <img
           src={"/left-arrow-back-svgrepo-com.svg"}
-          className="w-8 h-8"
+          className="w-6 h-6 lg:w-8 lg:h-8"
           alt="back-button"
         />
       </button>
