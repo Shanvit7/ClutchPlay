@@ -1,4 +1,4 @@
-# ClutchPlay
+# About ClutchPlay
 Clutchplay is a Progressive Web Application (PWA) that provides users with comprehensive NBA-related content. It offers information on upcoming matches, lists of players, teams, stadiums, and the latest news about players. This application is built using React, Vite.js, Daisy UI, and Tailwind CSS.
 ### Features
 * Upcoming Matches: Stay updated with the schedule of upcoming NBA matches.
